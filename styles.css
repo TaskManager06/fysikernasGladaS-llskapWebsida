@@ -60,9 +60,9 @@ main{
 .nyheter{
     grid-area:nyheter;
     border:1px solid black;
-    width:95%;
+    width:80%;
     height: 92%;
-    margin: auto;
+    margin: auto 35px auto auto;
     border-radius: 5%;
 }
 .nyheter>article{
@@ -70,15 +70,16 @@ main{
     margin:10px 20px 45px 20px;
     /*padding:0px 0px 40% 0px;*/
     height:40%;
+    
     border-radius: 4%;
     overflow:hidden;
 }
 .nobel{
     grid-area:nobel;   
     border:1px solid black;
-    width:85%;
+    width:65%;
     height: 85%;
-    margin: auto;
+    margin: auto auto auto 35px;
     border-radius: 25px;
 
     
@@ -99,10 +100,11 @@ main{
 .fysik{
     grid-area:fysik;
     border:1px solid black;
-    width:85%;
+    width:65%;
     height: 85%;
     margin: auto;
     border-radius:25px;
+    margin: auto auto auto 35px;
 }
     
 footer{
