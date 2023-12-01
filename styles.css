@@ -10,6 +10,7 @@ body{
     "main"
     "footer";
     text-align:center;
+
 }
 
 header{
@@ -68,10 +69,9 @@ main{
 .nyheter>article{
     border:1px solid black;
     margin:10px 20px 45px 20px;
-    /*padding:0px 0px 40% 0px;*/
     height:40%;
     
-    border-radius: 4%;
+    border-radius: 15px;
     overflow:hidden;
 }
 .nobel{
