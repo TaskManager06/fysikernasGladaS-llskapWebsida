@@ -18,6 +18,10 @@ header{
 header>h1{
     margin:35px 0px 35px 0px;
 }
+a{
+    text-decoration:none;
+    color:black;
+}
 nav{
     grid-area:nav;
     display:grid;
@@ -42,10 +46,6 @@ nav>ul>li{
     padding:10px 20px 10px 20px;
     
 }
-nav>ul>li>a{
-    text-decoration:none;
-    color:black;
-}
 
 main{
     grid-area:main;
@@ -63,7 +63,7 @@ main{
     width:95%;
     height: 92%;
     margin: auto;
-    border-radius: 4%;
+    border-radius: 5%;
 }
 .nyheter>article{
     border:1px solid black;
@@ -79,7 +79,7 @@ main{
     width:85%;
     height: 85%;
     margin: auto;
-    border-radius: 4%;
+    border-radius: 25px;
 
     
 }
@@ -102,7 +102,7 @@ main{
     width:85%;
     height: 85%;
     margin: auto;
-    border-radius: 4%;
+    border-radius:25px;
 }
     
 footer{

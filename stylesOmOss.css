@@ -11,16 +11,16 @@ body{
     "footer";
     text-align:center;
 }
+a{
+    text-decoration:none;
+    color:black;
+}
 
 header{
     grid-area:header;
 }
 header>h1{
     margin:35px 0px 35px 0px;
-}
-a{
-    text-decoration:none;
-    color:black;
 }
 nav{
     grid-area:nav;
@@ -47,9 +47,29 @@ nav>ul>li{
     
 }
 
+main{
+    grid-area:main;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:1fr 1fr;
+    grid-template-areas:"omOss" "kontakt";
+    
+}
+main>section{
+    width:65%;
+    margin:10px auto 40px auto;
+    line-break:auto;
+    border-radius:15px;
+    border:1px solid black;
 
-
-
+}
+.omOss{
+    grid-area:omOss;
+    
+}
+.kontakt{
+    grid-area:kontakt;
+}
 footer{
-    grid-area:footer;
-    }
+grid-area:footer;
+}
