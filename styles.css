@@ -52,11 +52,23 @@ main{
     grid-area:main;
     display:grid;
     grid-template-columns:1fr 1fr;
-    grid-template-rows:1fr fr;
+    grid-template-rows:1fr 1fr;
     grid-template-areas: 
     "nyheter nobel"
     "nyheter fysik";
     
+}
+@media(max-width:600px){
+    main{
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:1fr 1fr;
+        grid-template-areas: 
+        "nyheter"
+        "nyheter"
+        "nobel"
+        "fysik";
+        background:red;
+    }
 }
 .nyheter{
     grid-area:nyheter;
