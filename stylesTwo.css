@@ -46,10 +46,259 @@ nav>ul>li{
     padding:10px 20px 10px 20px;
     
 }
+<<<<<<< Updated upstream
+=======
+nav>ul>li>a{
+    text-decoration:none;
+    color:black;
+}
+
+main{
+    grid-area:main;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-template-areas:"intro" "h1" "h2" "h3" "h4" "h5";
+  
+    
+}
+input{
+    display:none;
+}
+main>section:nth-of-type(n + 2){
+    margin:50px auto 50px auto;
+    padding:10px 40px 40px 40px;
+    border:1px solid red;
+    background:grey;
+}
+
+h2{
+    grid-area:title;
+}
+
+.krafter{   
+    grid-area:h1;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40% auto auto 20%;
+    grid-template-areas: "title title" "krafter1 krafter2""krafter3 krafter4" "expandKrafter expandKrafter";
+    
+    
+}
+.krafter>h2{
+    margin:20px;
+    height:25%;
+}
+.krafter>label{
+    grid-area:expandKrafter;
+    margin:20px;
+}
+.krafter > section {
+    display:none;
+    
+}
+.krafter > #expandKrafter:checked ~ section {
+    display:block;
+    
+}
+.krafter > #expandKrafter:checked ~ *{
+    padding:10px 10px 10px 20px;
+}
+.krafter > section:nth-of-type(1){
+    grid-area:krafter1;
+    margin:auto;
+    }
+
+.krafter > section:nth-of-type(2){
+    grid-area:krafter2;
+    margin:auto;
+    }
+.krafter > section:nth-of-type(2){
+    grid-area:krafter3;
+    margin:auto;
+    }
+.krafter > section:nth-of-type(2){
+    grid-area:krafter4;
+    margin:auto;
+    }
+>>>>>>> Stashed changes
 
 
 
 
+.tryck{   
+    grid-area:h2;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40% auto auto 20%;
+    grid-template-areas: "title title" "tryck1 tryck2""tryck3 tryck4" "expandTryck expandTryck";
+    margin:auto;
+    
+}
+
+
+.tryck>label{
+    grid-area:expandTryck;
+    margin:auto;
+}
+.tryck > section {
+    display:none;
+    
+}
+.tryck > #expandTryck:checked ~ section {
+    display:block;
+    padding:10px 20px 10px 20px;
+    
+}
+.tryck > section:nth-of-type(1){
+    grid-area:tryck1;
+    margin:auto;
+    }
+
+.tryck > section:nth-of-type(2){
+    grid-area:tryck2;
+    margin:auto;
+    }
+.tryck > section:nth-of-type(2){
+    grid-area:tryck3;
+    margin:auto;
+    }
+.tryck > section:nth-of-type(2){
+    grid-area:tryck4;
+    margin:auto;
+    }
+
+
+
+
+.rörelse{   
+    grid-area:h3;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40% auto auto 20%;
+    grid-template-areas: "title title" "rörelse1 rörelse2""rörelse3 rörelse4" "expandRörelse expandRörelse";
+    margin:auto;
+        
+}
+
+h2{
+    grid-area:title;
+    margin:auto;
+}
+.rörelse>label{
+    grid-area:expandRörelse;
+    margin:auto;
+}
+.rörelse > section {
+    display:none;
+    
+}
+.rörelse > #expandRörelse:checked ~ section {
+    display:block;
+    padding:10px 20px 10px 20px;
+    
+}
+.rörelse > section:nth-of-type(1){
+    grid-area:rörelse1;
+    margin:auto;
+    }
+
+.rörelse > section:nth-of-type(2){
+    grid-area:rörelse2;
+    margin:auto;
+    }
+.rörelse > section:nth-of-type(2){
+    grid-area:rörelse3;
+    margin:auto;
+    }
+.rörelse > section:nth-of-type(2){
+    grid-area:rörelse4;
+    margin:auto;
+    }
+
+
+    
+.kärnfysik{   
+    grid-area:h4;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40% auto auto 20%;
+    grid-template-areas: "title title" "kärnfysik1 kärnfysik2""kärnfysik3 kärnfysik4" "expandKärnfysik expandKärnfysik";
+    margin:auto;
+    
+}
+.kärnfysik>label{
+    grid-area:expandKärnfysik;
+    margin:auto;
+}
+.kärnfysik > section {
+    display:none;
+    
+}
+.kärnfysik > #expandKärnfysik:checked ~ section {
+    display:block;
+    padding:10px 20px 10px 20px;
+    
+}
+.kärnfysik > section:nth-of-type(1){
+    grid-area:kärnfysik1;
+    margin:auto;
+    }
+
+.kärnfysik > section:nth-of-type(2){
+    grid-area:kärnfysik2;
+    margin:auto;
+    }
+.kärnfysik > section:nth-of-type(2){
+    grid-area:kärnfysik3;
+    margin:auto;
+    }
+.kärnfysik > section:nth-of-type(2){
+    grid-area:kärnfysik4;
+    margin:auto;
+}
+
+
+.termofysik{   
+    grid-area:h5;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40% auto auto 20%;
+    grid-template-areas: "title title" "termofysik1 termofysik2""termofysik3 termofysik4" "expandTermofysik expandTermofysik";
+    margin:auto;
+    
+}
+.termofysik>label{
+    grid-area:expandTermofysik;
+    margin:auto;
+}
+.termofysik > section {
+    display:none;
+    
+}
+.termofysik > #expandTermofysik:checked ~ section {
+    display:block;
+    padding:10px 20px 10px 20px;
+    
+}
+.termofysik > section:nth-of-type(1){
+    grid-area:termofysik1;
+    margin:auto;
+    }
+
+.termofysik > section:nth-of-type(2){
+    grid-area:termofysik2;
+    margin:auto;
+    }
+.termofysik > section:nth-of-type(2){
+    grid-area:termofysik3;
+    margin:auto;
+    }
+.termofysik > section:nth-of-type(2){
+    grid-area:termofysik4;
+    margin:auto;
+}
 footer{
     grid-area:footer;
+    margin:50px
     }
