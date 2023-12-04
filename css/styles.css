@@ -63,6 +63,7 @@ nav > ul > li {
 	margin: 45px auto 15px auto;
 	width: 60%;
 	overflow: hidden;
+	padding: 10px;
 	height: auto;
 	max-height: 70%;
 }
