@@ -1,298 +1,270 @@
-body{
-    font-family: arial;
-    display:grid;
-    grid-template-columns:100%;
-    height:100vh;
-    grid-template-rows: 50px 75px 1fr 45px;
-    grid-template-areas: 
-    "nav"
-    "header"
-    "main"
-    "footer";
-    text-align:center;
+body {
+	font-family: arial;
+	display: grid;
+	grid-template-columns: 100%;
+	height: 100vh;
+	grid-template-rows: 50px 75px 1fr 45px;
+	grid-template-areas:
+		"nav"
+		"header"
+		"main"
+		"footer";
+	text-align: center;
 }
 
-header{
-    grid-area:header;
+header {
+	grid-area: header;
 }
-header>h1{
-    margin:35px 0px 35px 0px;
+header > h1 {
+	margin: 35px 0px 35px 0px;
 }
-a{
-    text-decoration:none;
-    color:black;
+a {
+	text-decoration: none;
+	color: black;
 }
-nav{
-    grid-area:nav;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "titel menu";
-    width: 100%;
-    border: 1px solid black;
+nav {
+	grid-area: nav;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "titel menu";
+	width: 100%;
+	border: 1px solid black;
 }
-nav>h2{
-    grid-area:titel;
-    text-align:left;
-    margin:16px;
+nav > h2 {
+	grid-area: titel;
+	text-align: left;
+	margin: 16px;
 }
-nav>ul{
-    
-    grid-area: menu;
-    text-align: right;
+nav > ul {
+	grid-area: menu;
+	text-align: right;
 }
-nav>ul>li{
-    display:inline-block;
-    padding:10px 20px 10px 20px;
-    
+nav > ul > li {
+	display: inline-block;
+	padding: 10px 20px 10px 20px;
 }
-nav>ul>li>a{
-    text-decoration:none;
-    color:black;
+nav > ul > li > a {
+	text-decoration: none;
+	color: black;
 }
 
-main{
-    grid-area:main;
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto auto;
-    grid-template-areas:"intro" "h1" "h2" "h3" "h4" "h5";
-  
-    
+main {
+	grid-area: main;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto auto auto auto;
+	grid-template-areas: "intro" "h1" "h2" "h3" "h4" "h5";
 }
-input{
-    display:none;
+input {
+	display: none;
 }
-main>section:nth-of-type(n + 2){
-    margin:10px auto 10px auto;
-    padding:40px 40px 40px 40px;
+main > section:nth-of-type(n + 2) {
+	margin: 10px auto 10px auto;
+	padding: 40px 40px 40px 40px;
 }
 
-h2{
-    grid-area:title;
+h2 {
+	grid-area: title;
 }
 
-.krafter{   
-    grid-area:h1;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 40% auto auto 20%;
-    grid-template-areas: "title title" "krafter1 krafter2""krafter3 krafter4" "expandKrafter expandKrafter";
-    margin:auto;
-    
+.krafter {
+	grid-area: h1;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 40% auto auto 20%;
+	grid-template-areas: "title title" "krafter1 krafter2" "krafter3 krafter4" "expandKrafter expandKrafter";
+	margin: auto;
 }
-.krafter>h2{
-
-    height:25%;
+.krafter > h2 {
+	height: 25%;
 }
-.krafter>label{
-    grid-area:expandKrafter;
-    margin:auto;
+.krafter > label {
+	grid-area: expandKrafter;
+	margin: auto;
 }
 .krafter > section {
-    display:none;
-    
+	display: none;
 }
 .krafter > #expandKrafter:checked ~ section {
-    display:block;
-    
+	display: block;
 }
-.krafter > #expandKrafter:checked ~ *{
-    padding:10px 10px 10px 20px;
-    background:red;
+.krafter > #expandKrafter:checked ~ * {
+	padding: 10px 10px 10px 20px;
+	background: red;
 }
-.krafter > section:nth-of-type(1){
-    grid-area:krafter1;
-    margin:auto;
-    }
-
-.krafter > section:nth-of-type(2){
-    grid-area:krafter2;
-    margin:auto;
-    }
-.krafter > section:nth-of-type(2){
-    grid-area:krafter3;
-    margin:auto;
-    }
-.krafter > section:nth-of-type(2){
-    grid-area:krafter4;
-    margin:auto;
-    }
-
-
-.tryck{   
-    grid-area:h2;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 40% auto auto 20%;
-    grid-template-areas: "title title" "tryck1 tryck2""tryck3 tryck4" "expandTryck expandTryck";
-    margin:auto;
-    
+.krafter > section:nth-of-type(1) {
+	grid-area: krafter1;
+	margin: auto;
 }
 
+.krafter > section:nth-of-type(2) {
+	grid-area: krafter2;
+	margin: auto;
+}
+.krafter > section:nth-of-type(2) {
+	grid-area: krafter3;
+	margin: auto;
+}
+.krafter > section:nth-of-type(2) {
+	grid-area: krafter4;
+	margin: auto;
+}
 
-.tryck>label{
-    grid-area:expandTryck;
-    margin:auto;
+.tryck {
+	grid-area: h2;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 40% auto auto 20%;
+	grid-template-areas: "title title" "tryck1 tryck2" "tryck3 tryck4" "expandTryck expandTryck";
+	margin: auto;
+}
+
+.tryck > label {
+	grid-area: expandTryck;
+	margin: auto;
 }
 .tryck > section {
-    display:none;
-    
+	display: none;
 }
 .tryck > #expandTryck:checked ~ section {
-    display:block;
-    padding:10px 20px 10px 20px;
-    
+	display: block;
+	padding: 10px 20px 10px 20px;
 }
-.tryck > section:nth-of-type(1){
-    grid-area:tryck1;
-    margin:auto;
-    }
-
-.tryck > section:nth-of-type(2){
-    grid-area:tryck2;
-    margin:auto;
-    }
-.tryck > section:nth-of-type(2){
-    grid-area:tryck3;
-    margin:auto;
-    }
-.tryck > section:nth-of-type(2){
-    grid-area:tryck4;
-    margin:auto;
-    }
-
-
-
-
-.rörelse{   
-    grid-area:h3;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 40% auto auto 20%;
-    grid-template-areas: "title title" "rörelse1 rörelse2""rörelse3 rörelse4" "expandRörelse expandRörelse";
-    margin:auto;
-        
+.tryck > section:nth-of-type(1) {
+	grid-area: tryck1;
+	margin: auto;
 }
 
-h2{
-    grid-area:title;
-    margin:auto;
+.tryck > section:nth-of-type(2) {
+	grid-area: tryck2;
+	margin: auto;
 }
-.rörelse>label{
-    grid-area:expandRörelse;
-    margin:auto;
+.tryck > section:nth-of-type(2) {
+	grid-area: tryck3;
+	margin: auto;
+}
+.tryck > section:nth-of-type(2) {
+	grid-area: tryck4;
+	margin: auto;
+}
+
+.rörelse {
+	grid-area: h3;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 40% auto auto 20%;
+	grid-template-areas: "title title" "rörelse1 rörelse2" "rörelse3 rörelse4" "expandRörelse expandRörelse";
+	margin: auto;
+}
+
+h2 {
+	grid-area: title;
+	margin: auto;
+}
+.rörelse > label {
+	grid-area: expandRörelse;
+	margin: auto;
 }
 .rörelse > section {
-    display:none;
-    
+	display: none;
 }
 .rörelse > #expandRörelse:checked ~ section {
-    display:block;
-    padding:10px 20px 10px 20px;
-    
+	display: block;
+	padding: 10px 20px 10px 20px;
 }
-.rörelse > section:nth-of-type(1){
-    grid-area:rörelse1;
-    margin:auto;
-    }
-
-.rörelse > section:nth-of-type(2){
-    grid-area:rörelse2;
-    margin:auto;
-    }
-.rörelse > section:nth-of-type(2){
-    grid-area:rörelse3;
-    margin:auto;
-    }
-.rörelse > section:nth-of-type(2){
-    grid-area:rörelse4;
-    margin:auto;
-    }
-
-
-    
-.kärnfysik{   
-    grid-area:h4;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 40% auto auto 20%;
-    grid-template-areas: "title title" "kärnfysik1 kärnfysik2""kärnfysik3 kärnfysik4" "expandKärnfysik expandKärnfysik";
-    margin:auto;
-    
+.rörelse > section:nth-of-type(1) {
+	grid-area: rörelse1;
+	margin: auto;
 }
-.kärnfysik>label{
-    grid-area:expandKärnfysik;
-    margin:auto;
+
+.rörelse > section:nth-of-type(2) {
+	grid-area: rörelse2;
+	margin: auto;
+}
+.rörelse > section:nth-of-type(2) {
+	grid-area: rörelse3;
+	margin: auto;
+}
+.rörelse > section:nth-of-type(2) {
+	grid-area: rörelse4;
+	margin: auto;
+}
+
+.kärnfysik {
+	grid-area: h4;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 40% auto auto 20%;
+	grid-template-areas: "title title" "kärnfysik1 kärnfysik2" "kärnfysik3 kärnfysik4" "expandKärnfysik expandKärnfysik";
+	margin: auto;
+}
+.kärnfysik > label {
+	grid-area: expandKärnfysik;
+	margin: auto;
 }
 .kärnfysik > section {
-    display:none;
-    
+	display: none;
 }
 .kärnfysik > #expandKärnfysik:checked ~ section {
-    display:block;
-    padding:10px 20px 10px 20px;
-    
+	display: block;
+	padding: 10px 20px 10px 20px;
 }
-.kärnfysik > section:nth-of-type(1){
-    grid-area:kärnfysik1;
-    margin:auto;
-    }
-
-.kärnfysik > section:nth-of-type(2){
-    grid-area:kärnfysik2;
-    margin:auto;
-    }
-.kärnfysik > section:nth-of-type(2){
-    grid-area:kärnfysik3;
-    margin:auto;
-    }
-.kärnfysik > section:nth-of-type(2){
-    grid-area:kärnfysik4;
-    margin:auto;
+.kärnfysik > section:nth-of-type(1) {
+	grid-area: kärnfysik1;
+	margin: auto;
 }
 
-
-.termofysik{   
-    grid-area:h5;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 40% auto auto 20%;
-    grid-template-areas: "title title" "termofysik1 termofysik2""termofysik3 termofysik4" "expandTermofysik expandTermofysik";
-    margin:auto;
-    
+.kärnfysik > section:nth-of-type(2) {
+	grid-area: kärnfysik2;
+	margin: auto;
 }
-.termofysik>label{
-    grid-area:expandTermofysik;
-    margin:auto;
+.kärnfysik > section:nth-of-type(2) {
+	grid-area: kärnfysik3;
+	margin: auto;
+}
+.kärnfysik > section:nth-of-type(2) {
+	grid-area: kärnfysik4;
+	margin: auto;
+}
+
+.termofysik {
+	grid-area: h5;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 40% auto auto 20%;
+	grid-template-areas: "title title" "termofysik1 termofysik2" "termofysik3 termofysik4" "expandTermofysik expandTermofysik";
+	margin: auto;
+}
+.termofysik > label {
+	grid-area: expandTermofysik;
+	margin: auto;
 }
 .termofysik > section {
-    display:none;
-    
+	display: none;
 }
 .termofysik > #expandTermofysik:checked ~ section {
-    display:block;
-    padding:10px 20px 10px 20px;
-    
+	display: block;
+	padding: 10px 20px 10px 20px;
 }
-.termofysik > section:nth-of-type(1){
-    grid-area:termofysik1;
-    margin:auto;
-    }
+.termofysik > section:nth-of-type(1) {
+	grid-area: termofysik1;
+	margin: auto;
+}
 
-.termofysik > section:nth-of-type(2){
-    grid-area:termofysik2;
-    margin:auto;
-    }
-.termofysik > section:nth-of-type(2){
-    grid-area:termofysik3;
-    margin:auto;
-    }
-.termofysik > section:nth-of-type(2){
-    grid-area:termofysik4;
-    margin:auto;
+.termofysik > section:nth-of-type(2) {
+	grid-area: termofysik2;
+	margin: auto;
 }
-footer{
-    grid-area:footer;
-    margin:50px
-    }
+.termofysik > section:nth-of-type(2) {
+	grid-area: termofysik3;
+	margin: auto;
+}
+.termofysik > section:nth-of-type(2) {
+	grid-area: termofysik4;
+	margin: auto;
+}
+footer {
+	grid-area: footer;
+	margin: 50px;
+}

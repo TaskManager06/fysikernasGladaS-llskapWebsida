@@ -130,7 +130,7 @@ main.fysikaliskaLagar > section:nth-of-type(n + 2) {
 	padding: 40px 40px 40px 40px;
 }
 
-main.fysikaliskaLagar > h2 {
+main.fysikaliskaLagar h2 {
 	grid-area: title;
 }
 
