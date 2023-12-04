@@ -1,0 +1,283 @@
+body {
+	font-family: arial;
+	display: grid;
+	grid-template-columns: 100%;
+	height: 100vh;
+	grid-template-rows: 50px 75px 1fr 45px;
+	grid-template-areas:
+		"nav"
+		"header"
+		"main"
+		"footer";
+	text-align: center;
+}
+
+header {
+	grid-area: header;
+}
+header > h1 {
+	margin: 35px 0px 35px 0px;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+nav {
+	grid-area: nav;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "titel menu";
+	width: 100%;
+	border: 1px solid black;
+}
+nav > h2 {
+	grid-area: titel;
+	text-align: left;
+	margin: 16px;
+}
+nav > ul {
+	grid-area: menu;
+	text-align: right;
+}
+nav > ul > li {
+	display: inline-block;
+	padding: 10px 20px 10px 20px;
+}
+
+main.nobelPristagare {
+	grid-area: main;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas: "intro" "h1" "h2" "h3";
+}
+main.nobelPristagare input {
+	display: none;
+}
+main.nobelPristagare > section:nth-of-type(n + 2) {
+	margin: 10px auto 10px auto;
+	padding: 20px 20px 20px 20px;
+	border-radius: 25px;
+	width: 75%;
+}
+
+.ÅretsVinnare {
+	grid-area: h1;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 20% auto auto;
+	grid-template-areas: "title title" "test test" "expandÅretsVinnare expandÅretsVinnare";
+	margin: auto;
+	align-content: center;
+	background: grey;
+}
+.ÅretsVinnare h2 {
+	grid-area: title;
+	height: 25%;
+	margin: 0;
+}
+
+div.container {
+	grid-area: test;
+}
+
+.ÅretsVinnare .a1 {
+	grid-area: a1;
+	margin: auto;
+}
+
+.ÅretsVinnare .a2 {
+	grid-area: a2;
+	margin: auto;
+}
+
+.ÅretsVinnare .a3 {
+	grid-area: a3;
+	margin: auto;
+}
+
+.ÅretsVinnare .a4 {
+	grid-area: a4;
+	margin: auto;
+}
+
+.ÅretsVinnare > label {
+	grid-area: expandÅretsVinnare;
+	padding: 25px 0 0 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.ÅretsVinnare .labelMindre {
+	display: none;
+}
+
+.ÅretsVinnare > div.container {
+	display: none;
+}
+#expandÅretsVinnare:checked ~ .container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: "a1 a2" "a3 a4";
+	gap: 15%;
+}
+
+#expandÅretsVinnare:checked ~ .container {
+	padding: 10px 10px 10px 10px;
+}
+
+#expandÅretsVinnare:checked ~ .labelMindre {
+	display: block;
+	grid-area: expandÅretsVinnare;
+}
+#expandÅretsVinnare:checked ~ .labelMer {
+	display: none;
+}
+
+.kändaGenomHistorien {
+	grid-area: h2;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 20% auto auto;
+	grid-template-areas: "title title" "test test" "expandkändaGenomHistorien expandkändaGenomHistorien";
+	margin: auto;
+	align-content: center;
+	background: grey;
+}
+.kändaGenomHistorien h2 {
+	grid-area: title;
+	height: 25%;
+	margin: 0;
+}
+
+div.container {
+	grid-area: test;
+}
+
+.kändaGenomHistorien .a1 {
+	grid-area: a1;
+	margin: auto;
+}
+
+.kändaGenomHistorien .a2 {
+	grid-area: a2;
+	margin: auto;
+}
+
+.kändaGenomHistorien .a3 {
+	grid-area: a3;
+	margin: auto;
+}
+
+.kändaGenomHistorien .a4 {
+	grid-area: a4;
+	margin: auto;
+}
+
+.kändaGenomHistorien > .labelMer {
+	grid-area: expandkändaGenomHistorien;
+	padding: 25px 0 0 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.kändaGenomHistorien .labelMindre {
+	display: none;
+}
+.kändaGenomHistorien > div.container {
+	display: none;
+}
+#expandkändaGenomHistorien:checked ~ .container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: "a1 a2" "a3 a4";
+	gap: 15%;
+	padding: 10px 10px 10px 10px;
+}
+
+#expandkändaGenomHistorien:checked ~ .labelMindre {
+	display: block;
+	grid-area: expandkändaGenomHistorien;
+}
+#expandkändaGenomHistorien:checked ~ .labelMer {
+	display: none;
+}
+
+.storaGenomFall {
+	grid-area: h3;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 20% auto auto;
+	grid-template-areas: "title title" "test test" "expandstoraGenomFall expandstoraGenomFall";
+	margin: auto;
+	align-content: center;
+	background: grey;
+}
+.storaGenomFall h2 {
+	grid-area: title;
+	height: 25%;
+	margin: 0;
+}
+
+div.container {
+	grid-area: test;
+}
+
+.storaGenomFall .a1 {
+	grid-area: a1;
+	margin: auto;
+}
+
+.storaGenomFall .a2 {
+	grid-area: a2;
+	margin: auto;
+}
+
+.storaGenomFall .a3 {
+	grid-area: a3;
+	margin: auto;
+}
+
+.storaGenomFall .a4 {
+	grid-area: a4;
+	margin: auto;
+}
+
+.storaGenomFall > .labelMer {
+	grid-area: expandstoraGenomFall;
+	padding: 25px 0 0 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.storaGenomFall .labelMindre {
+	display: none;
+}
+.storaGenomFall > div.container {
+	display: none;
+}
+#expandstoraGenomFall:checked ~ .container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: "a1 a2" "a3 a4";
+	gap: 15%;
+}
+
+#expandstoraGenomFall:checked ~ .container {
+	padding: 10px 10px 10px 10px;
+}
+#expandstoraGenomFall:checked ~ .labelMindre {
+	display: block;
+	grid-area: expandstoraGenomFall;
+}
+#expandstoraGenomFall:checked ~ .labelMer {
+	display: none;
+}
+
+footer {
+	grid-area: footer;
+}
