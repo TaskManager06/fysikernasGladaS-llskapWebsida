@@ -115,22 +115,22 @@ nav > ul > li {
 /* Index.html */
 
 /*fysikaliska lagar*/
-.fysikaliskaLagar {
+main.fysikaliskaLagar {
 	grid-area: main;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto auto auto auto;
 	grid-template-areas: "intro" "h1" "h2" "h3" "h4" "h5";
 }
-.fysikaliskaLagar input {
+main.fysikaliskaLagar input {
 	display: none;
 }
-.fysikaliskaLagar > section:nth-of-type(n + 2) {
+main.fysikaliskaLagar > section:nth-of-type(n + 2) {
 	margin: 10px auto 10px auto;
 	padding: 40px 40px 40px 40px;
 }
 
-.fysikaliskaLagar > h2 {
+main.fysikaliskaLagar > h2 {
 	grid-area: title;
 }
 
@@ -224,7 +224,7 @@ nav > ul > li {
 	margin: auto;
 }
 
-.fysikaliskaLagar > h2 {
+main.fysikaliskaLagar > h2 {
 	grid-area: title;
 	margin: auto;
 }
@@ -347,7 +347,7 @@ nav > ul > li {
 	border-radius: 15px;
 	border: 1px solid black;
 }
-.omOss {
+.omOssSection {
 	grid-area: omOss;
 }
 .kontakt {
