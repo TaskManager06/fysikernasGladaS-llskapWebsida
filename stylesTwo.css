@@ -46,8 +46,6 @@ nav>ul>li{
     padding:10px 20px 10px 20px;
     
 }
-<<<<<<< Updated upstream
-=======
 nav>ul>li>a{
     text-decoration:none;
     color:black;
@@ -66,10 +64,8 @@ input{
     display:none;
 }
 main>section:nth-of-type(n + 2){
-    margin:50px auto 50px auto;
-    padding:10px 40px 40px 40px;
-    border:1px solid red;
-    background:grey;
+    margin:10px auto 10px auto;
+    padding:40px 40px 40px 40px;
 }
 
 h2{
@@ -82,16 +78,16 @@ h2{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 40% auto auto 20%;
     grid-template-areas: "title title" "krafter1 krafter2""krafter3 krafter4" "expandKrafter expandKrafter";
-    
+    margin:auto;
     
 }
 .krafter>h2{
-    margin:20px;
+
     height:25%;
 }
 .krafter>label{
     grid-area:expandKrafter;
-    margin:20px;
+    margin:auto;
 }
 .krafter > section {
     display:none;
@@ -103,6 +99,7 @@ h2{
 }
 .krafter > #expandKrafter:checked ~ *{
     padding:10px 10px 10px 20px;
+    background:red;
 }
 .krafter > section:nth-of-type(1){
     grid-area:krafter1;
@@ -121,9 +118,6 @@ h2{
     grid-area:krafter4;
     margin:auto;
     }
->>>>>>> Stashed changes
-
-
 
 
 .tryck{   

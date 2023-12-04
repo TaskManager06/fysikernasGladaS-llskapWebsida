@@ -52,18 +52,30 @@ main{
     grid-area:main;
     display:grid;
     grid-template-columns:1fr 1fr;
-    grid-template-rows:1fr fr;
-    grid-template-areas: 
+    grid-template-rows:0.5fr 1fr 1fr;
+    grid-template-areas:
+    "intro intro" 
     "nyheter nobel"
     "nyheter fysik";
     
+}
+.intro{
+    grid-area:intro;
+    border:1px solid black;
+    border-radius: 25px;
+    margin:45px auto 15px auto;
+    width:60%;
+    overflow:hidden;
+    height:auto;
+    max-height:70%;
+
 }
 .nyheter{
     grid-area:nyheter;
     border:1px solid black;
     width:80%;
     height: 92%;
-    margin: auto 35px auto auto;
+    margin: 35px 35px auto auto;
     border-radius: 25px;
 }
 .nyheter>article{
@@ -79,7 +91,7 @@ main{
     border:1px solid black;
     width:65%;
     height: 85%;
-    margin: auto auto auto 35px;
+    margin: 35px auto auto 35px;
     border-radius: 25px;
 
     
