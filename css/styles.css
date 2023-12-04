@@ -3,6 +3,7 @@ body {
 	display: grid;
 	grid-template-columns: 100%;
 	height: 100vh;
+	margin: 0;
 	grid-template-rows: 50px 75px 1fr 45px;
 	grid-template-areas:
 		"nav"
@@ -33,11 +34,13 @@ nav {
 }
 nav > h2 {
 	grid-area: titel;
+	font-size: 22px;
 	text-align: left;
-	margin: 16px;
+	margin: 10px;
 }
 nav > ul {
 	grid-area: menu;
+	margin: 9px;
 	text-align: right;
 }
 nav > ul > li {
@@ -339,7 +342,7 @@ main.fysikaliskaLagar > h2 {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr;
-	grid-template-areas: "omOss" "kontakt";
+	grid-template-areas: "kontakt" "omOss";
 }
 .omOss > section {
 	width: 65%;
