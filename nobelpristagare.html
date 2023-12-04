@@ -8,7 +8,7 @@
     <body>
         <header>
             <h1>
-                Titel
+                Nobelpristagare
             </h1>
         </header>
         <nav>
@@ -27,10 +27,61 @@
                 </li>
             </ul>
         </nav>
-        <main></main>
+        <main>
+            <div class="nobel_box">
+            <div class="nobel_box_inner">
+            <h2 class="forskare">
+                Forskare 1
+            </h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/1200px-Marie_Curie_c._1920s.jpg" class="nobel_img">
+            <div class="amne">Fysik</div>
+            <div class="text">Text</div>
+            </div>
+            </div>
+
+        </main>
         <footer>
             <p>
                 Sidfottext
             </p>
         </footer>
     </body>
+
+
+
+    <!-- TEST -->
+    <style>
+    .nobel_box {
+        display: grid;
+        height: 300px;
+        grid-template-rows:1;
+        grid-template-columns:2fr 2fr 2fr;
+        grid-template-areas: ". thing .";
+
+    }
+    .nobel_box_inner {
+        grid-area: thing;
+        border: 1px solid black;
+        margin: 20px;
+        padding: 10px;
+        border-radius: 40px;
+        background:red;
+        display: grid;
+        grid-template-rows: 1fr 3fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "a b" "c d" "e f";
+    }
+    .forskare {
+        grid-area: a;
+    }
+    .amne {
+        grid-area: c;
+    }
+    .text {
+        grid-area: e;
+    }
+    .nobel_img {
+        grid-area: d;
+        height: 100px;
+    }
+    </style>
