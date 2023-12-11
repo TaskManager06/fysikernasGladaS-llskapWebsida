@@ -133,221 +133,258 @@ nav > ul > li {
 /* Index.html */
 
 /*fysikaliska lagar*/
-main.fysikaliskaLagar {
+main.fysikaliskaFormler {
 	grid-area: main;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: auto auto auto auto auto auto;
-	grid-template-areas: "intro" "h1" "h2" "h3" "h4" "h5";
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas: "intro" "section1" "section2" "section3";
 }
-main.fysikaliskaLagar input {
+main.fysikaliskaFormler input {
 	display: none;
 }
-main.fysikaliskaLagar > section:nth-of-type(n + 2) {
+main.fysikaliskaFormler > section:nth-of-type(n + 2) {
 	margin: 10px auto 10px auto;
-	padding: 40px 40px 40px 40px;
+	padding: 20px 20px 20px 20px;
+	border-radius: 25px;
+	width: 75%;
 }
-
-main.fysikaliskaLagar h2 {
-	grid-area: title;
-}
-
-.krafter {
-	grid-area: h1;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 40% auto auto 20%;
-	grid-template-areas: "title title" "krafter1 krafter2" "krafter3 krafter4" "expandKrafter expandKrafter";
-	margin: auto;
-}
-.krafter > h2 {
-	height: 25%;
-}
-.krafter > label {
-	grid-area: expandKrafter;
-	margin: auto;
-}
-.krafter > section {
-	display: none;
-}
-.krafter > #expandKrafter:checked ~ section {
-	display: block;
-}
-.krafter > #expandKrafter:checked ~ * {
-	padding: 10px 10px 10px 20px;
-	background: red;
-}
-.krafter > section:nth-of-type(1) {
-	grid-area: krafter1;
-	margin: auto;
-}
-
-.krafter > section:nth-of-type(2) {
-	grid-area: krafter2;
-	margin: auto;
-}
-.krafter > section:nth-of-type(2) {
-	grid-area: krafter3;
-	margin: auto;
-}
-.krafter > section:nth-of-type(2) {
-	grid-area: krafter4;
-	margin: auto;
-}
-
-.tryck {
-	grid-area: h2;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 40% auto auto 20%;
-	grid-template-areas: "title title" "tryck1 tryck2" "tryck3 tryck4" "expandTryck expandTryck";
-	margin: auto;
-}
-
-.tryck > label {
-	grid-area: expandTryck;
-	margin: auto;
-}
-.tryck > section {
-	display: none;
-}
-.tryck > #expandTryck:checked ~ section {
-	display: block;
-	padding: 10px 20px 10px 20px;
-}
-.tryck > section:nth-of-type(1) {
-	grid-area: tryck1;
-	margin: auto;
-}
-
-.tryck > section:nth-of-type(2) {
-	grid-area: tryck2;
-	margin: auto;
-}
-.tryck > section:nth-of-type(2) {
-	grid-area: tryck3;
-	margin: auto;
-}
-.tryck > section:nth-of-type(2) {
-	grid-area: tryck4;
-	margin: auto;
+main.fysikaliskaFormler > .intro{
+	background:darkgrey;
+	width:65%;
+	margin:auto;
+	padding:10px;
+	border-radius:15px;
 }
 
 .rörelse {
-	grid-area: h3;
+	grid-area: section1;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 40% auto auto 20%;
-	grid-template-areas: "title title" "rörelse1 rörelse2" "rörelse3 rörelse4" "expandRörelse expandRörelse";
+	grid-template-rows: 20% auto auto;
+	grid-template-areas: "title title" "content content" "expandRörelse expandRörelse";
+	margin: auto;
+	align-content: center;
+	background: grey;
+}
+.rörelse h2 {
+	grid-area: title;
+	height: 25%;
+	margin: 0;
+	padding:0 0 25px 0;
+}
+
+div.container {
+	grid-area: content;
+}
+.container > section{
+	background:darkgrey;
+	border-radius:15px;
+	padding:10px 15px 10px 15px;
+}
+
+.rörelse .a1 {
+	grid-area: a1;
 	margin: auto;
 }
 
-main.fysikaliskaLagar > h2 {
-	grid-area: title;
+.rörelse .a2 {
+	grid-area: a2;
 	margin: auto;
 }
+
+.rörelse .a3 {
+	grid-area: a3;
+	margin: auto;
+}
+
+.rörelse .a4 {
+	grid-area: a4;
+	margin: auto;
+}
+
 .rörelse > label {
 	grid-area: expandRörelse;
-	margin: auto;
+	padding: 25px 0 25px 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
 }
-.rörelse > section {
+.rörelse .labelMindre {
 	display: none;
 }
-.rörelse > #expandRörelse:checked ~ section {
-	display: block;
-	padding: 10px 20px 10px 20px;
-}
-.rörelse > section:nth-of-type(1) {
-	grid-area: rörelse1;
-	margin: auto;
-}
 
-.rörelse > section:nth-of-type(2) {
-	grid-area: rörelse2;
-	margin: auto;
+.rörelse > div.container {
+	display: none;
 }
-.rörelse > section:nth-of-type(2) {
-	grid-area: rörelse3;
-	margin: auto;
-}
-.rörelse > section:nth-of-type(2) {
-	grid-area: rörelse4;
-	margin: auto;
-}
-
-.kärnfysik {
-	grid-area: h4;
+#expandRörelse:checked ~ .container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 40% auto auto 20%;
-	grid-template-areas: "title title" "kärnfysik1 kärnfysik2" "kärnfysik3 kärnfysik4" "expandKärnfysik expandKärnfysik";
-	margin: auto;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: "a1 a2" "a3 a4";
+	gap: 15%;
 }
-.kärnfysik > label {
-	grid-area: expandKärnfysik;
-	margin: auto;
+
+#expandRörelse:checked ~ .container {
+	padding: 10px 10px 10px 10px;
 }
-.kärnfysik > section {
+
+#expandRörelse:checked ~ .labelMindre {
+	display: block;
+	grid-area: expandRörelse;
+}
+#expandRörelse:checked ~ .labelMer {
 	display: none;
 }
-.kärnfysik > #expandKärnfysik:checked ~ section {
-	display: block;
-	padding: 10px 20px 10px 20px;
+
+.krafter {
+	grid-area: section2;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 20% auto auto;
+	grid-template-areas: "title title" "content content" "expandKrafter expandKrafter";
+	margin: auto;
+	align-content: center;
+	background: grey;
 }
-.kärnfysik > section:nth-of-type(1) {
-	grid-area: kärnfysik1;
+.krafter h2 {
+	grid-area: title;
+	height: 25%;
+	margin: 0;
+	padding:0 0 25px 0;
+}
+
+div.container {
+	grid-area: content;
+}
+
+.krafter .a1 {
+	grid-area: a1;
 	margin: auto;
 }
 
-.kärnfysik > section:nth-of-type(2) {
-	grid-area: kärnfysik2;
+.krafter .a2 {
+	grid-area: a2;
 	margin: auto;
 }
-.kärnfysik > section:nth-of-type(2) {
-	grid-area: kärnfysik3;
+
+.krafter .a3 {
+	grid-area: a3;
 	margin: auto;
 }
-.kärnfysik > section:nth-of-type(2) {
-	grid-area: kärnfysik4;
+
+.krafter .a4 {
+	grid-area: a4;
 	margin: auto;
+}
+
+.krafter > .labelMer {
+	grid-area: expandKrafter;
+	padding: 25px 0 25px 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.krafter .labelMindre {
+	display: none;
+	
+}
+.krafter > div.container {
+	display: none;
+}
+#expandKrafter:checked ~ .container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: "a1 a2" "a3 a4";
+	gap: 15%;
+	padding: 10px 10px 10px 10px;
+}
+
+#expandKrafter:checked ~ .labelMindre {
+	display: block;
+	grid-area: expandKrafter;
+	cursor: pointer;
+}
+#expandKrafter:checked ~ .labelMer {
+	display: none;
 }
 
 .termofysik {
-	grid-area: h5;
+	grid-area: section3;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 40% auto auto 20%;
-	grid-template-areas: "title title" "termofysik1 termofysik2" "termofysik3 termofysik4" "expandTermofysik expandTermofysik";
+	grid-template-rows: 20% auto auto;
+	grid-template-areas: "title title" "content content" "expandTermofysik expandTermofysik";
 	margin: auto;
+	align-content: center;
+	background: grey;
 }
-.termofysik > label {
-	grid-area: expandTermofysik;
-	margin: auto;
+.termofysik h2 {
+	grid-area: title;
+	height: 25%;
+	margin: 0;
+	padding:0 0 25px 0;
 }
-.termofysik > section {
-	display: none;
+
+div.container {
+	grid-area: content;
 }
-.termofysik > #expandTermofysik:checked ~ section {
-	display: block;
-	padding: 10px 20px 10px 20px;
-}
-.termofysik > section:nth-of-type(1) {
-	grid-area: termofysik1;
+
+.termofysik .a1 {
+	grid-area: a1;
 	margin: auto;
 }
 
-.termofysik > section:nth-of-type(2) {
-	grid-area: termofysik2;
+.termofysik .a2 {
+	grid-area: a2;
 	margin: auto;
 }
-.termofysik > section:nth-of-type(2) {
-	grid-area: termofysik3;
+
+.termofysik .a3 {
+	grid-area: a3;
 	margin: auto;
 }
-.termofysik > section:nth-of-type(2) {
-	grid-area: termofysik4;
+
+.termofysik .a4 {
+	grid-area: a4;
 	margin: auto;
 }
+
+.termofysik > .labelMer {
+	grid-area: expandTermofysik;
+	padding: 25px 0 25px 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.termofysik .labelMindre {
+	display: none;
+}
+.termofysik > div.container {
+	display: none;
+}
+#expandTermofysik:checked ~ .container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: "a1 a2" "a3 a4";
+	gap: 15%;
+}
+
+#expandTermofysik:checked ~ .container {
+	padding: 10px 10px 10px 10px;
+}
+#expandTermofysik:checked ~ .labelMindre {
+	display: block;
+	grid-area: expandTermofysik;
+	cursor: pointer;
+}
+#expandTermofysik:checked ~ .labelMer {
+	display: none;
+}
+
+
 /*fysikaliska lagar*/
 
 /*omOss*/

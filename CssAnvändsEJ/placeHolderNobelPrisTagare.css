@@ -46,34 +46,41 @@ nav > ul > li {
 	padding: 10px 20px 10px 20px;
 }
 
-main.nobelPristagare {
+main.fysikaliskaFormler {
 	grid-area: main;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto auto;
 	grid-template-areas: "intro" "h1" "h2" "h3";
 }
-main.nobelPristagare input {
+main.fysikaliskaFormler input {
 	display: none;
 }
-main.nobelPristagare > section:nth-of-type(n + 2) {
+main.fysikaliskaFormler > section:nth-of-type(n + 2) {
 	margin: 10px auto 10px auto;
 	padding: 20px 20px 20px 20px;
 	border-radius: 25px;
 	width: 75%;
 }
+main.fysikaliskaFormler > .intro{
+	background:darkgrey;
+	width:65%;
+	margin:auto;
+	padding:10px;
+	border-radius:15px;
+}
 
-.ÅretsVinnare {
+.rörelse {
 	grid-area: h1;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 20% auto auto;
-	grid-template-areas: "title title" "test test" "expandÅretsVinnare expandÅretsVinnare";
+	grid-template-areas: "title title" "content content" "expandRörelse expandRörelse";
 	margin: auto;
 	align-content: center;
 	background: grey;
 }
-.ÅretsVinnare h2 {
+.rörelse h2 {
 	grid-area: title;
 	height: 25%;
 	margin: 0;
@@ -81,47 +88,49 @@ main.nobelPristagare > section:nth-of-type(n + 2) {
 }
 
 div.container {
-	grid-area: test;
+	grid-area: content;
 }
 .container > section{
-	background:red;
+	background:darkblue;
+	border-radius:15px;
+	padding:10px 15px 10px 15px;
 }
 
-.ÅretsVinnare .a1 {
+.rörelse .a1 {
 	grid-area: a1;
 	margin: auto;
 }
 
-.ÅretsVinnare .a2 {
+.rörelse .a2 {
 	grid-area: a2;
 	margin: auto;
 }
 
-.ÅretsVinnare .a3 {
+.rörelse .a3 {
 	grid-area: a3;
 	margin: auto;
 }
 
-.ÅretsVinnare .a4 {
+.rörelse .a4 {
 	grid-area: a4;
 	margin: auto;
 }
 
-.ÅretsVinnare > label {
-	grid-area: expandÅretsVinnare;
+.rörelse > label {
+	grid-area: expandRörelse;
 	padding: 25px 0 25px 0;
 	width: 100%;
 	height: 100%;
 	cursor: pointer;
 }
-.ÅretsVinnare .labelMindre {
+.rörelse .labelMindre {
 	display: none;
 }
 
-.ÅretsVinnare > div.container {
+.rörelse > div.container {
 	display: none;
 }
-#expandÅretsVinnare:checked ~ .container {
+#expandRörelse:checked ~ .container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
@@ -129,32 +138,29 @@ div.container {
 	gap: 15%;
 }
 
-#expandÅretsVinnare:checked ~ .container {
+#expandRörelse:checked ~ .container {
 	padding: 10px 10px 10px 10px;
 }
-#expandÅretsVinnare:checked ~ .container >section{
-	background:red;
-}
 
-#expandÅretsVinnare:checked ~ .labelMindre {
+#expandRörelse:checked ~ .labelMindre {
 	display: block;
-	grid-area: expandÅretsVinnare;
+	grid-area: expandRörelse;
 }
-#expandÅretsVinnare:checked ~ .labelMer {
+#expandRörelse:checked ~ .labelMer {
 	display: none;
 }
 
-.kändaGenomHistorien {
+.krafter {
 	grid-area: h2;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 20% auto auto;
-	grid-template-areas: "title title" "test test" "expandkändaGenomHistorien expandkändaGenomHistorien";
+	grid-template-areas: "title title" "content content" "expandKrafter expandKrafter";
 	margin: auto;
 	align-content: center;
 	background: grey;
 }
-.kändaGenomHistorien h2 {
+.krafter h2 {
 	grid-area: title;
 	height: 25%;
 	margin: 0;
@@ -162,43 +168,44 @@ div.container {
 }
 
 div.container {
-	grid-area: test;
+	grid-area: content;
 }
 
-.kändaGenomHistorien .a1 {
+.krafter .a1 {
 	grid-area: a1;
 	margin: auto;
 }
 
-.kändaGenomHistorien .a2 {
+.krafter .a2 {
 	grid-area: a2;
 	margin: auto;
 }
 
-.kändaGenomHistorien .a3 {
+.krafter .a3 {
 	grid-area: a3;
 	margin: auto;
 }
 
-.kändaGenomHistorien .a4 {
+.krafter .a4 {
 	grid-area: a4;
 	margin: auto;
 }
 
-.kändaGenomHistorien > .labelMer {
-	grid-area: expandkändaGenomHistorien;
+.krafter > .labelMer {
+	grid-area: expandKrafter;
 	padding: 25px 0 25px 0;
 	width: 100%;
 	height: 100%;
 	cursor: pointer;
 }
-.kändaGenomHistorien .labelMindre {
+.krafter .labelMindre {
+	display: none;
+	
+}
+.krafter > div.container {
 	display: none;
 }
-.kändaGenomHistorien > div.container {
-	display: none;
-}
-#expandkändaGenomHistorien:checked ~ .container {
+#expandKrafter:checked ~ .container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
@@ -207,25 +214,26 @@ div.container {
 	padding: 10px 10px 10px 10px;
 }
 
-#expandkändaGenomHistorien:checked ~ .labelMindre {
+#expandKrafter:checked ~ .labelMindre {
 	display: block;
-	grid-area: expandkändaGenomHistorien;
+	grid-area: expandKrafter;
+	cursor: pointer;
 }
-#expandkändaGenomHistorien:checked ~ .labelMer {
+#expandKrafter:checked ~ .labelMer {
 	display: none;
 }
 
-.storaGenomFall {
+.termofysik {
 	grid-area: h3;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 20% auto auto;
-	grid-template-areas: "title title" "test test" "expandstoraGenomFall expandstoraGenomFall";
+	grid-template-areas: "title title" "content content" "expandTermofysik expandTermofysik";
 	margin: auto;
 	align-content: center;
 	background: grey;
 }
-.storaGenomFall h2 {
+.termofysik h2 {
 	grid-area: title;
 	height: 25%;
 	margin: 0;
@@ -233,43 +241,43 @@ div.container {
 }
 
 div.container {
-	grid-area: test;
+	grid-area: content;
 }
 
-.storaGenomFall .a1 {
+.termofysik .a1 {
 	grid-area: a1;
 	margin: auto;
 }
 
-.storaGenomFall .a2 {
+.termofysik .a2 {
 	grid-area: a2;
 	margin: auto;
 }
 
-.storaGenomFall .a3 {
+.termofysik .a3 {
 	grid-area: a3;
 	margin: auto;
 }
 
-.storaGenomFall .a4 {
+.termofysik .a4 {
 	grid-area: a4;
 	margin: auto;
 }
 
-.storaGenomFall > .labelMer {
-	grid-area: expandstoraGenomFall;
+.termofysik > .labelMer {
+	grid-area: expandTermofysik;
 	padding: 25px 0 25px 0;
 	width: 100%;
 	height: 100%;
 	cursor: pointer;
 }
-.storaGenomFall .labelMindre {
+.termofysik .labelMindre {
 	display: none;
 }
-.storaGenomFall > div.container {
+.termofysik > div.container {
 	display: none;
 }
-#expandstoraGenomFall:checked ~ .container {
+#expandTermofysik:checked ~ .container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
@@ -277,14 +285,15 @@ div.container {
 	gap: 15%;
 }
 
-#expandstoraGenomFall:checked ~ .container {
+#expandTermofysik:checked ~ .container {
 	padding: 10px 10px 10px 10px;
 }
-#expandstoraGenomFall:checked ~ .labelMindre {
+#expandTermofysik:checked ~ .labelMindre {
 	display: block;
-	grid-area: expandstoraGenomFall;
+	grid-area: expandTermofysik;
+	cursor: pointer;
 }
-#expandstoraGenomFall:checked ~ .labelMer {
+#expandTermofysik:checked ~ .labelMer {
 	display: none;
 }
 
