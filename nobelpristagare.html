@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="sv">
     <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="css/styles.css">
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/styles.css" />
     </head>
     <body>
         <header>
@@ -28,17 +27,64 @@
             </ul>
         </nav>
         <main>
-            <div class="nobel_box">
-            <div class="nobel_box_inner">
-            <h2 class="forskare">
-                Forskare 1
-            </h2>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/1200px-Marie_Curie_c._1920s.jpg" class="nobel_img">
-            <div class="amne">Fysik</div>
-            <div class="text">Text</div>
-            </div>
-            </div>
+            <h2>2023 i Elektronrörelse:</h2>
+            <div class="two_columns_nobel">
 
+                <div class="nobel_box" id ="nobel1">
+                    <div class="nobel_box_inner">
+                        <h2 class="forskare">
+                            Forskare 1
+                        </h2>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/1200px-Marie_Curie_c._1920s.jpg" class="nobel_img" />
+                        <div class="amne">Fysik</div>
+                        <div class="text">Text</div>
+                    </div>
+                </div>
+
+                <div class="nobel_box" id="nobel2">
+                    <div class="nobel_box_inner">
+                        <h2 class="forskare">
+                            Forskare 1
+                        </h2>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/1200px-Marie_Curie_c._1920s.jpg" class="nobel_img" />
+                        <div class="amne">Fysik</div>
+                        <div class="text">Text</div>
+                    </div>
+                </div>
+
+                <div class="nobel_box" id="nobel3">
+                    <div class="nobel_box_inner">
+                        <h2 class="forskare">
+                            Forskare 1
+                        </h2>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/1200px-Marie_Curie_c._1920s.jpg" class="nobel_img" />
+                        <div class="amne">Fysik</div>
+                        <div class="text">Text</div>
+                    </div>
+                </div>
+
+                <div class="nobel_box" id="nobel4">
+                    <div class="nobel_box_inner">
+                        <h2 class="forskare">
+                            Forskare 1
+                        </h2>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/1200px-Marie_Curie_c._1920s.jpg" class="nobel_img" />
+                        <div class="amne">Fysik</div>
+                        <div class="text">Text</div>
+                    </div>
+                </div>
+
+                <div class="nobel_box" id="nobel5">
+                    <div class="nobel_box_inner">
+                        <h2 class="forskare">
+                            Forskare 1
+                        </h2>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/1200px-Marie_Curie_c._1920s.jpg" class="nobel_img" />
+                        <div class="amne">Fysik</div>
+                        <div class="text">Text</div>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer>
             <p>
@@ -47,41 +93,67 @@
         </footer>
     </body>
 
-
-
     <!-- TEST -->
     <style>
-    .nobel_box {
-        display: grid;
-        height: 300px;
-        grid-template-rows:1;
-        grid-template-columns:2fr 2fr 2fr;
-        grid-template-areas: ". thing .";
+        .two_columns_nobel {
+            display: grid;
+            grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
+            grid-template-rows: 1fr 0.4fr 1fr 0.4fr 1fr 0.4fr 1fr;
+            grid-template-areas: ". twa . twb ." ". . . . ." ". twc . twd ." ". . . . ." ". twe . twf ." ". . . . ." ". twg . twh .";
+        }
 
-    }
-    .nobel_box_inner {
-        grid-area: thing;
-        border: 1px solid black;
-        margin: 20px;
-        padding: 10px;
-        border-radius: 40px;
-        background:red;
-        display: grid;
-        grid-template-rows: 1fr 3fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "a b" "c d" "e f";
-    }
-    .forskare {
-        grid-area: a;
-    }
-    .amne {
-        grid-area: c;
-    }
-    .text {
-        grid-area: e;
-    }
-    .nobel_img {
-        grid-area: d;
-        height: 100px;
-    }
+        #nobel1 {
+            grid-area: twa;
+        }
+        #nobel2 {
+            grid-area: twb;
+            background: red;
+        }
+        #nobel3 {
+            grid-area: twc;
+        }
+        #nobel4 {
+            grid-area: twd;
+        }
+        #nobel5 {
+            grid-area: twe;
+        }
+        
+
+        .nobel_box {
+            width: 100%;
+            height: 100%;
+  object-fit: cover;
+            display: grid;
+            grid-template-rows: 1;
+            grid-template-columns: 2fr 2fr 2fr;
+            grid-template-areas: ". nobel_inner .";
+        }
+        .nobel_box_inner {
+            grid-area: nobel_inner;
+            border: 1px solid black;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 40px;
+            background: rgb(231, 231, 231);
+            display: grid;
+            grid-template-rows: 0.5fr 3fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "inner_a inner_b" "inner_c inner_d" "inner_e inner_f";
+        }
+        .forskare {
+            grid-area: inner_a;
+        }
+        .amne {
+            grid-area: inner_c;
+        }
+        .text {
+            grid-area: inner_e;
+        }
+        .nobel_img {
+            height: 200px;
+            grid-area: inner_d;
+            object-fit: cover;
+        }
     </style>
+</html>
