@@ -97,7 +97,7 @@
     <style>
         .two_columns_nobel {
             display: grid;
-            grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
+            grid-template-columns: 1fr 5fr 0fr 5fr 1fr;
             grid-template-rows: 1fr 0.4fr 1fr 0.4fr 1fr 0.4fr 1fr;
             grid-template-areas: ". twa . twb ." ". . . . ." ". twc . twd ." ". . . . ." ". twe . twf ." ". . . . ." ". twg . twh .";
         }
@@ -107,7 +107,6 @@
         }
         #nobel2 {
             grid-area: twb;
-            background: red;
         }
         #nobel3 {
             grid-area: twc;
@@ -130,6 +129,9 @@
             grid-template-areas: ". nobel_inner .";
         }
         .nobel_box_inner {
+            width: 100%;
+            height: 100%;
+  object-fit: cover;
             grid-area: nobel_inner;
             border: 1px solid black;
             margin: 20px;
