@@ -35,6 +35,7 @@ nav > h2 {
 	grid-area: titel;
 	text-align: left;
 	margin: 16px;
+	
 }
 nav > ul {
 	grid-area: menu;
@@ -76,10 +77,14 @@ main.nobelPristagare > section:nth-of-type(n + 2) {
 	grid-area: title;
 	height: 25%;
 	margin: 0;
+	padding:0 0 25px 0;
 }
 
 div.container {
 	grid-area: test;
+}
+.container > section{
+	background:red;
 }
 
 .ÅretsVinnare .a1 {
@@ -104,7 +109,7 @@ div.container {
 
 .ÅretsVinnare > label {
 	grid-area: expandÅretsVinnare;
-	padding: 25px 0 0 0;
+	padding: 25px 0 25px 0;
 	width: 100%;
 	height: 100%;
 	cursor: pointer;
@@ -126,6 +131,9 @@ div.container {
 
 #expandÅretsVinnare:checked ~ .container {
 	padding: 10px 10px 10px 10px;
+}
+#expandÅretsVinnare:checked ~ .container >section{
+	background:red;
 }
 
 #expandÅretsVinnare:checked ~ .labelMindre {
@@ -150,6 +158,7 @@ div.container {
 	grid-area: title;
 	height: 25%;
 	margin: 0;
+	padding:0 0 25px 0;
 }
 
 div.container {
@@ -178,7 +187,7 @@ div.container {
 
 .kändaGenomHistorien > .labelMer {
 	grid-area: expandkändaGenomHistorien;
-	padding: 25px 0 0 0;
+	padding: 25px 0 25px 0;
 	width: 100%;
 	height: 100%;
 	cursor: pointer;
@@ -220,6 +229,7 @@ div.container {
 	grid-area: title;
 	height: 25%;
 	margin: 0;
+	padding:0 0 25px 0;
 }
 
 div.container {
@@ -248,7 +258,7 @@ div.container {
 
 .storaGenomFall > .labelMer {
 	grid-area: expandstoraGenomFall;
-	padding: 25px 0 0 0;
+	padding: 25px 0 25px 0;
 	width: 100%;
 	height: 100%;
 	cursor: pointer;
