@@ -27,17 +27,19 @@
             </ul>
         </nav>
         <main>
-            <h2>Nobels fysikpris 2023: (i Elektronrörelse)</h2>
+            <h2>Nobels fysikpris 2023:</h2>
             <div class="two_columns_nobel">
 
                 <div class="nobel_box" id ="nobel1">
                     <div class="nobel_box_inner">
                         <h2 class="forskare">
-                            Forskare 1
+                            <a href="forskers">Michel Mayor</a>
                         </h2>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/1200px-Marie_Curie_c._1920s.jpg" class="nobel_img" />
-                        <div class="amne">Fysik</div>
-                        <div class="text">Text</div>
+                        <div class="bakgrund">Michel Gustave Édouard Mayor, född 12 januari 1942 i Lausanne, är en schweizisk professor emeritus i astronomi vid universitetet i Genève och upptäckare av ett flertal planeter utanför solsystemet. 
+                            </div>
+                        <div class="text">Nobelpris 2023 i elektronrörelse
+                            </div>
                     </div>
                 </div>
 
@@ -47,7 +49,7 @@
                             Forskare 1
                         </h2>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/1200px-Marie_Curie_c._1920s.jpg" class="nobel_img" />
-                        <div class="amne">Fysik</div>
+                        <div class="bakgrund">Ämnesområde</div>
                         <div class="text">Text</div>
                     </div>
                 </div>
@@ -58,7 +60,7 @@
                             Forskare 1
                         </h2>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/1200px-Marie_Curie_c._1920s.jpg" class="nobel_img" />
-                        <div class="amne">Fysik</div>
+                        <div class="bakgrund">Ämnesområde</div>
                         <div class="text">Text</div>
                     </div>
                 </div>
@@ -69,7 +71,7 @@
                             Forskare 1
                         </h2>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/1200px-Marie_Curie_c._1920s.jpg" class="nobel_img" />
-                        <div class="amne">Fysik</div>
+                        <div class="bakgrund">Ämnesområde</div>
                         <div class="text">Text</div>
                     </div>
                 </div>
@@ -80,7 +82,7 @@
                             Forskare 1
                         </h2>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/1200px-Marie_Curie_c._1920s.jpg" class="nobel_img" />
-                        <div class="amne">Fysik</div>
+                        <div class="bakgrund">Ämnesområde</div>
                         <div class="text">Text</div>
                     </div>
                 </div>
@@ -91,7 +93,7 @@
                             Forskare 1
                         </h2>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/1200px-Marie_Curie_c._1920s.jpg" class="nobel_img" />
-                        <div class="amne">Fysik</div>
+                        <div class="bakgrund">Ämnesområde</div>
                         <div class="text">Text</div>
                     </div>
                 </div>
@@ -102,7 +104,7 @@
                             Forskare 1
                         </h2>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/1200px-Marie_Curie_c._1920s.jpg" class="nobel_img" />
-                        <div class="amne">Fysik</div>
+                        <div class="bakgrund">Ämnesområde</div>
                         <div class="text">Text</div>
                     </div>
                 </div>
@@ -113,7 +115,7 @@
                             Forskare 1
                         </h2>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Marie_Curie_c._1920s.jpg/1200px-Marie_Curie_c._1920s.jpg" class="nobel_img" />
-                        <div class="amne">Fysik</div>
+                        <div class="bakgrund">Ämnesområde</div>
                         <div class="text">Text</div>
                     </div>
                 </div>
@@ -171,9 +173,6 @@
         
 
         .nobel_box {
-            width: 100%;
-            height: 100%;
-  object-fit: cover;
             display: grid;
             grid-template-rows: 1;
             grid-template-columns: 2fr 2fr 2fr;
@@ -188,25 +187,42 @@
             margin: 20px;
             padding: 10px;
             border-radius: 40px;
-            background: rgb(231, 231, 231);
+            background: rgb(241, 241, 241);
             display: grid;
-            grid-template-rows: 0.5fr 3fr 1fr;
+            grid-template-rows: 0.5fr 2fr 0.1fr;
             grid-template-columns: 1fr 1fr;
             grid-template-areas: "inner_a inner_b" "inner_c inner_d" "inner_e inner_f";
         }
         .forskare {
             grid-area: inner_a;
+            margin-left: 5px;
         }
-        .amne {
+        .bakgrund {
             grid-area: inner_c;
+            margin: 10px;
         }
         .text {
-            grid-area: inner_e;
+            grid-area: inner_f;
+            border: 1px solid black;
+            height: 38px;
+            width: 100%;
+            overflow:scroll;
+            background: rgb(77, 75, 75);
+            border-radius: 5px;
+            font-weight: 600;
+            color: white;
+            text-shadow: #000 1px 0 10px;
+            margin-left: -25px;
+            margin-top: -55px;
+            padding: 10px;
+            
+
         }
         .nobel_img {
             height: 200px;
             grid-area: inner_d;
             object-fit: cover;
+            border-radius: 12px;
         }
     </style>
 </html>
