@@ -525,11 +525,10 @@ div.container {
 }
 
 header h1 {
-	font-size: 58px;
+	font-size: 48px;
 	text-align: left;
 	margin-left: 60px;
 	width: auto;
-	max-width: 280px;
 	text-decoration: solid underline black 1px;
 }
 /*nobelPristagare*/
