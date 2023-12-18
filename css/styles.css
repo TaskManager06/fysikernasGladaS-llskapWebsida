@@ -399,6 +399,9 @@ div.container {
 	grid-template-rows: 1fr 1fr;
 	grid-template-areas: "kontakt" "omOss";
 }
+.omOss p {
+	padding: 16px;
+}
 .omOss > section {
 	width: 65%;
 	margin: 10px auto 40px auto;
