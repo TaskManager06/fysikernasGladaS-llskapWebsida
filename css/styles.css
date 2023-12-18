@@ -144,7 +144,7 @@ main.fysikaliskaFormler {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto auto;
-	grid-template-areas: "intro" "section1" "section2" "section3";
+	grid-template-areas: "intro" "section1" "section2" "section3" "section4";
 }
 main.fysikaliskaFormler input {
 	display: none;
@@ -389,6 +389,80 @@ div.container {
 	display: none;
 }
 
+.newtonsLagar {
+	grid-area: section4;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 20% auto auto;
+	grid-template-areas: "title title" "content content" "expandNewtonsLagar expandNewtonsLagar";
+	margin: auto;
+	align-content: center;
+	background: grey;
+}
+.newtonsLagar h2 {
+	grid-area: title;
+	height: 25%;
+	margin: 0;
+	padding: 0 0 25px 0;
+}
+
+div.container {
+	grid-area: content;
+}
+.newtonsLagar .a1 {
+	grid-area: a1;
+	margin: auto;
+}
+
+.newtonsLagar .a2 {
+	grid-area: a2;
+	margin: auto;
+}
+
+.newtonsLagar .a3 {
+	grid-area: a3;
+	margin: auto;
+}
+
+.newtonsLagar .a4 {
+	grid-area: a4;
+	margin: auto;
+}
+
+.newtonsLagar > .labelMer {
+	grid-area: expandNewtonsLagar;
+	padding: 25px 0 25px 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+.newtonsLagar .labelMindre {
+	display: none;
+}
+.newtonsLagar > div.container {
+	display: none;
+}
+#expandNewtonsLagar:checked ~ .container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: "a1 a2" "a3 a3";
+	row-gap: 3%;
+	column-gap: 10%;
+}
+
+#expandNewtonsLagar:checked ~ .container {
+	padding: 10px 10px 10px 10px;
+}
+#expandNewtonsLagar:checked ~ .labelMindre {
+	display: block;
+	grid-area: expandNewtonsLagar;
+	cursor: pointer;
+}
+#expandNewtonsLagar:checked ~ .labelMer {
+	display: none;
+}
+
 /*fysikaliska lagar*/
 
 /*omOss*/
@@ -437,18 +511,12 @@ div.container {
 /*fysikerDetaljTemplate*/
 
 /*nobelPristagare*/
+
 .two_columns_nobel {
 	display: grid;
-	grid-template-columns: 2fr 7fr 0fr 7fr 2fr;
-	grid-template-rows: 1fr 100px 1fr 0.4fr;
-	grid-template-areas: ". twa . twb ." ". . . . ." ". twc . twd .";
-}
-
-.two_columns_nobel_2 {
-	display: grid;
-	grid-template-columns: 2fr 7fr 0fr 7fr 2fr;
-	grid-template-rows: 1fr 100px 1fr;
-	grid-template-areas: ". twe . twf ." ". . . . ." ". twg . twh .";
+	grid-template-columns: 1fr 5fr 0fr 5fr 1fr;
+	grid-template-rows: 1fr 0.4fr 1fr 0.4fr 1fr 0.4fr 1fr;
+	grid-template-areas: ". twa . twb ." ". . . . ." ". twc . twd ." ". . . . ." ". twe . twf ." ". . . . ." ". twg . twh .";
 }
 
 #nobel1 {
@@ -475,10 +543,6 @@ div.container {
 #nobel8 {
 	grid-area: twh;
 }
-
-
-
-
 .nobelpristagare {
 	grid-area: main;
 }
@@ -545,28 +609,3 @@ header h1 {
 	text-decoration: solid underline black 1px;
 }
 /*nobelPristagare*/
-.FysikerOm {
-	margin-top: 100px;
-	text-align: left;
-	margin-left: 200px;
-}
-
-.FysikerBild {
-	height: 300px;
-	border-radius: 20px;
-}
-
-.NobelPrisTagareExtra {
-	border-radius: 20px;
-	padding: 10px;
-	background: whitesmoke;
-	width: 10%;
-	border: 1px solid white;
-	margin-left: auto;
-	margin-right: auto;
-	overflow: hidden;
-}
-
-a {
-	color: rgb(0, 0, 119);
-}
