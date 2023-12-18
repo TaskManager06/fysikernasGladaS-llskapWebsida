@@ -16,9 +16,9 @@ body {
 
 /* hide scrollbar but allow scrolling */
 article {
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox */
-    overflow-y: scroll; 
+	-ms-overflow-style: none; /* for Internet Explorer, Edge */
+	scrollbar-width: none; /* for Firefox */
+	overflow-y: scroll;
 }
 
 body *::-webkit-scrollbar {
@@ -58,6 +58,9 @@ nav > ul {
 nav > ul > li {
 	display: inline-block;
 	padding: 10px 20px 10px 20px;
+}
+footer {
+	grid-area: footer;
 }
 
 /* Index.html */
@@ -410,8 +413,7 @@ div.container {
 	grid-area: kontakt;
 }
 /*omOss*/
-/*nobelPristagare*/
-/*nobelPristagare*/
+
 /*fysikerDetaljTemplate*/
 
 .fysikerDetaljTemplate {
@@ -431,9 +433,7 @@ div.container {
 }
 /*fysikerDetaljTemplate*/
 
-footer {
-	grid-area: footer;
-}
+/*nobelPristagare*/
 
 .two_columns_nobel {
 	display: grid;
@@ -466,7 +466,9 @@ footer {
 #nobel8 {
 	grid-area: twh;
 }
-
+.nobelpristagare {
+	grid-area: main;
+}
 .nobel_spacer {
 	height: 100px;
 }
@@ -530,3 +532,4 @@ header h1 {
 	max-width: 280px;
 	text-decoration: solid underline black 1px;
 }
+/*nobelPristagare*/
