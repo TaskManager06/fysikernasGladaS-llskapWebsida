@@ -33,7 +33,6 @@ header > h1 {
 }
 a {
 	text-decoration: none;
-	color: black;
 }
 nav {
 	grid-area: nav;
@@ -79,12 +78,18 @@ footer {
 	border: 1px solid black;
 	border-radius: 25px;
 	margin: 45px auto 15px auto;
-	width: 60%;
+	width: 75%;
 	overflow: hidden;
 	padding: 10px;
+	margin-left: 8%;
 	height: auto;
 	max-height: 70%;
+	background: rgb(222, 222, 222);
 }
+.intro * {
+	margin: 10px;
+}
+
 .nyheter {
 	grid-area: nyheter;
 	border: 1px solid black;
@@ -92,6 +97,7 @@ footer {
 	height: 92%;
 	margin: 35px 35px auto auto;
 	border-radius: 25px;
+	background-color: rgb(144, 237, 255);
 }
 .nyheter > article {
 	border: 1px solid black;
@@ -99,6 +105,7 @@ footer {
 	height: 40%;
 	border-radius: 15px;
 	overflow: hidden;
+	background-color: rgb(206, 247, 255);
 }
 .nyheter > article > p {
 	margin: 24px;
@@ -113,6 +120,7 @@ footer {
 	height: 85%;
 	margin: 35px auto auto 35px;
 	border-radius: 25px;
+	background-color: rgb(255, 214, 109);
 }
 .nobel > a {
 	text-decoration: none;
@@ -135,10 +143,15 @@ footer {
 	margin: auto;
 	border-radius: 25px;
 	margin: auto auto auto 35px;
+	background-color: rgb(255, 255, 115);
 }
 /* Index.html */
 
 /*fysikaliska lagar*/
+div.container {
+	grid-area: content;
+}
+
 main.fysikaliskaFormler {
 	grid-area: main;
 	display: grid;
@@ -156,7 +169,8 @@ main.fysikaliskaFormler > section:nth-of-type(n + 2) {
 	width: 75%;
 }
 main.fysikaliskaFormler > .intro {
-	background: darkgrey;
+	background: rgb(113, 208, 255);
+	border: 0px;
 	width: 65%;
 	margin: auto;
 	padding: 10px;
@@ -171,7 +185,7 @@ main.fysikaliskaFormler > .intro {
 	grid-template-areas: "title title" "content content" "expandRörelse expandRörelse";
 	margin: auto;
 	align-content: center;
-	background: grey;
+	background: rgb(255, 222, 90);
 }
 .rörelse h2 {
 	grid-area: title;
@@ -180,9 +194,7 @@ main.fysikaliskaFormler > .intro {
 	padding: 0 0 25px 0;
 }
 
-div.container {
-	grid-area: content;
-}
+
 .container > section {
 	background: darkgrey;
 	border-radius: 15px;
@@ -251,7 +263,7 @@ div.container {
 	grid-template-areas: "title title" "content content" "expandKrafter expandKrafter";
 	margin: auto;
 	align-content: center;
-	background: grey;
+	background: rgb(255, 222, 90);
 }
 .krafter h2 {
 	grid-area: title;
@@ -260,9 +272,7 @@ div.container {
 	padding: 0 0 25px 0;
 }
 
-div.container {
-	grid-area: content;
-}
+
 
 .krafter .a1 {
 	grid-area: a1;
@@ -323,7 +333,7 @@ div.container {
 	grid-template-areas: "title title" "content content" "expandTermofysik expandTermofysik";
 	margin: auto;
 	align-content: center;
-	background: grey;
+	background: rgb(255, 222, 90);
 }
 .termofysik h2 {
 	grid-area: title;
@@ -332,29 +342,7 @@ div.container {
 	padding: 0 0 25px 0;
 }
 
-div.container {
-	grid-area: content;
-}
 
-.termofysik .a1 {
-	grid-area: a1;
-	margin: auto;
-}
-
-.termofysik .a2 {
-	grid-area: a2;
-	margin: auto;
-}
-
-.termofysik .a3 {
-	grid-area: a3;
-	margin: auto;
-}
-
-.termofysik .a4 {
-	grid-area: a4;
-	margin: auto;
-}
 
 .termofysik > .labelMer {
 	grid-area: expandTermofysik;
@@ -397,7 +385,7 @@ div.container {
 	grid-template-areas: "title title" "content content" "expandNewtonsLagar expandNewtonsLagar";
 	margin: auto;
 	align-content: center;
-	background: grey;
+	background: rgb(255, 222, 90);
 }
 .newtonsLagar h2 {
 	grid-area: title;
@@ -406,9 +394,7 @@ div.container {
 	padding: 0 0 25px 0;
 }
 
-div.container {
-	grid-area: content;
-}
+
 .newtonsLagar .a1 {
 	grid-area: a1;
 	margin: auto;
@@ -468,6 +454,7 @@ div.container {
 /*omOss*/
 .omOss {
 	grid-area: main;
+	height: 0px; /*Minsta möjliga höjd för att tvinga griddet att minimeras.*/
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr;
@@ -477,11 +464,13 @@ div.container {
 	padding: 16px;
 }
 .omOss > section {
+	background:rgb(240, 253, 255);
 	width: 65%;
 	margin: 10px auto 40px auto;
 	line-break: auto;
-	border-radius: 15px;
+	border-radius: 5px;
 	border: 1px solid black;
+	font-size: 15px;
 }
 .omOssSection {
 	grid-area: omOss;
@@ -514,9 +503,10 @@ div.container {
 
 .two_columns_nobel {
 	display: grid;
+	width: 100%;
 	grid-template-columns: 1fr 5fr 0fr 5fr 1fr;
 	grid-template-rows: 1fr 0.4fr 1fr 0.4fr 1fr 0.4fr 1fr;
-	grid-template-areas: ". twa . twb ." ". . . . ." ". twc . twd ." ". . . . ." ". twe . twf ." ". . . . ." ". twg . twh .";
+	grid-template-areas: ". twa . twb ." ". . . . ." ". twc . twd ." ". . throughouthistory . ." ". twe . twf ." ". . . . ." ". twg lista twh .";
 }
 
 #nobel1 {
@@ -546,6 +536,13 @@ div.container {
 .nobelpristagare {
 	grid-area: main;
 }
+
+.genom_historien {
+	padding-top: 100px;
+	grid-area: throughouthistory;
+	color: black;
+}
+
 .nobel_spacer {
 	height: 100px;
 }
@@ -608,4 +605,11 @@ header h1 {
 	width: auto;
 	text-decoration: solid underline black 1px;
 }
+.NobelPrisTagareExtra {
+	margin-top: 100px;
+	list-style: none;
+	grid-area: lista;
+	border-radius: 20px;
+}
+
 /*nobelPristagare*/
