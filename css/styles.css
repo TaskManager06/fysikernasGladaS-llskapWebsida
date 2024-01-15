@@ -22,11 +22,12 @@ body::-webkit-scrollbar {
 
 /*Titeln för varje sida*/
 header h1 {
-	font-size: 38px;
+	font-size: 2em;
 	text-align: left;
 	margin-left: 60px;
 	width: auto;
-	text-decoration: solid underline black 1px;
+	color: rgb(56, 56, 56);
+	text-decoration: underline;
 }
 
 /* hide scrollbar but allow scrolling */
@@ -93,6 +94,9 @@ main {
 		"intro intro"
 		"nyheter nobel"
 		"nyheter fysik";
+}
+.index h2 {
+	font-size: 1.25em; /* 1 + 1/4 storlek på texten. */
 }
 .intro {
 	grid-area: intro;
