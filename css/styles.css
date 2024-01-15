@@ -1,17 +1,17 @@
 body {
-	font-family: arial;
-	display: grid;
-	grid-template-columns: 100%;
-	height: 100vh;
-	margin: 0;
-	grid-template-rows: 50px 75px 20px 1fr 65px;
-	grid-template-areas:
+	font-family: arial; /*Bestämmer att standard fonten ska vara Arial*/
+	display: grid; /*Skapar en grid mall för alla sidor*/
+	grid-template-columns: 100%; /*Bestämmer att sidan ska ha en kolumn som tar upp 100% av sidan*/
+	height: 100vh; /*Bestämmer att höjden på sidan ska vara 100% av viewheighten */
+	margin: 0; /*Sätter marginen till 0 - inget mellanrum*/
+	grid-template-rows: 50px 75px 20px 1fr 65px;/* Bestämmer måtten för raderna på sidan*/
+	grid-template-areas: /*Skapar en grid.layout med semantiskt korrekta element*/
 		"nav"
 		"header"
 		"." /*tom rad*/
 		"main"
 		"footer";
-	text-align: center;
+	text-align: center; /*gör standard aletrnativet att all text ska vara centrerad */
 }
 body::-webkit-scrollbar { /* for Chrome, Safari, and Opera */
 	width: 0px;
@@ -20,12 +20,12 @@ body::-webkit-scrollbar { /* for Chrome, Safari, and Opera */
 
 /*Titeln för varje sida*/
 header h1 {
-	font-size: 2em;
-	text-align: left;
-	margin-left: 60px;
-	width: auto;
-	color: rgb(56, 56, 56);
-	text-decoration: underline;
+	font-size: 2em; /*Font storlek ska vara 2 gånger större än standard fonten*/
+	text-align: left; /*Texten ska vara på vänster kanten*/
+	margin-left: 60px; /* Skapar en margin så h1an är 60px ifrån vänster kanten*/
+	width: auto; /*Gör så att h1an tar så mycket plats den behöver*/
+	color: rgb(56, 56, 56);/*Bestämmer färgen*/
+	text-decoration: underline;/*Skapar en linje under texten*/
 }
 
 /* ===== visa inte scrollbar för Chrome, Safari och Opera ===== */
@@ -46,40 +46,40 @@ body::-webkit-scrollbar {
 }
 /* ================================================================= */
 
-header {
+header { /*Placerar alla headers i header raden*/
 	grid-area: header;
 }
 
 nav {
-	grid-area: nav;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr;
-	grid-template-areas: "titel menu";
-	width: 100%;
-	border: 2px solid black;
+	grid-area: nav; /*Placerar alla nav:ar i nav raden*/
+	display: grid; /*Skapr ett nytt grid*/
+	grid-template-columns: 1fr 1fr; /*Skapar 2 kolumner som tar halva föräldrar gridden var*/
+	grid-template-rows: 1fr; /*Gör så att elementen tar så mycket plats vertikalt som dem kan*/
+	grid-template-areas: "titel menu";/*Bestämmer namn för grid placeringarna*/
+	width: 100%;/*Bestämmer att naven ska ta 100% av sitt föräldrar element*/
+	border: 2px solid black; /*Skapar en 2px tjock svart border*/
 }
-nav > ul > li > a{
+nav > ul > li > a{ /*Bestämmer att länkarna i navven ska ej vara understrukna och vara färgade svarta*/
 	text-decoration: none;
 	color:black;
 }
-nav > h2 >a{
+nav > h2 >a{ /*Bestämmer att h2an ej ska vara underskruken och vara svart. + färg och en border*/
 	text-decoration: none;
 	color:black;
 	border: 1px solid black;
 	background: rgba(216, 239, 255, 0.1);
 }
 nav > h2 {
-	grid-area: titel;
-	font-size: 22px;
-	text-align: left;
-	margin: 10px;
-	margin-left: 20px;
+	grid-area: titel;/*Placerar h2an på rätt position*/
+	font-size: 22px;/*Bestämmer font-storlek*/
+	text-align: left;/*Placerar texten mot vänster*/
+	margin: 10px;/*skapar en 10px margin åt alla håll*/
+	margin-left: 20px; /*gör marginen åt vänster 20px*/
 }
 nav > ul {
-	grid-area: menu;
-	margin: 9px;
-	text-align: right;
+	grid-area: menu;/*Placerar tabellen med navven på rätt placering*/
+	margin: 9px; /*Skapar en 9px margin*/
+	text-align: right;/*Placerar texten mot höger*/
 }
 nav > ul > li {
 	display: inline-block;
@@ -347,12 +347,14 @@ a[target]{
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr;
 	grid-template-areas: "omOss" "kontakt";
+	background: linear-gradient(rgb(255, 255, 255), rgb(228, 228, 228));
 }
 .omOss p {
 	padding: 16px;
 }
 .omOss > section {
 	background: radial-gradient(rgb(255, 255, 255), rgb(244, 254, 255));
+	background:(206, 247, 255);
 	width: 65%;
 	margin: 10px auto 40px auto;
 	line-break: auto;
