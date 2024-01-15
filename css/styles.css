@@ -433,13 +433,14 @@ main.fysikaliskaFormler > .intro {
 	padding: 16px;
 }
 .omOss > section {
-	background: rgb(240, 253, 255);
+	background: radial-gradient(rgb(255, 255, 255), rgb(244, 254, 255));
 	width: 65%;
 	margin: 10px auto 40px auto;
 	line-break: auto;
 	border-radius: 9px;
 	border: 1px solid black;
 	font-size: 15px;
+	box-shadow: 2px 2px rgb(202, 202, 202);
 }
 .omOssSection {
 	grid-area: omOss;
@@ -518,6 +519,12 @@ main.fysikaliskaFormler > .intro {
 	grid-template-columns: 1fr 1fr;
 	grid-template-areas: "inner_a inner_b" "inner_c inner_d" "inner_e inner_f";
 }
+
+.nobel_box_inner img,
+.nobel_box_inner {
+	box-shadow: 3px 3px rgb(190, 190, 190);
+}
+
 .forskare {
 	grid-area: inner_a;
 	margin-left: 5px;
