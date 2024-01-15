@@ -13,10 +13,11 @@ body {
 		"footer";
 	text-align: center;
 }
-  
-body::-webkit-scrollbar { /* for Chrome, Safari, and Opera */
-	width: 0px;
-	height: 0px;
+
+body::-webkit-scrollbar {
+	/* for Chrome, Safari, and Opera */
+	width: 0;
+	height: 0;
 }
 
 /*Titeln för varje sida*/
@@ -57,6 +58,7 @@ nav > h2 {
 	font-size: 22px;
 	text-align: left;
 	margin: 10px;
+	margin-left: 20px;
 }
 nav > ul {
 	grid-area: menu;
@@ -77,7 +79,7 @@ a {
 }
 
 main {
-	background: linear-gradient(rgb(255, 255, 255),rgb(228, 228, 228));
+	background: linear-gradient(rgb(255, 255, 255), rgb(228, 228, 228));
 }
 
 /* Index.html */
@@ -97,7 +99,7 @@ main {
 	border-radius: 5px;
 	margin: 45px auto 15px auto;
 	width: 72.2%;
-	overflow: hidden;
+	overflow: scroll;
 	padding: 10px;
 	margin: 35px auto 15px auto;
 	height: auto;
@@ -125,7 +127,8 @@ main {
 	overflow: hidden;
 	background-color: rgb(206, 247, 255);
 }
-.nyheter > article > p, .fysik p {
+.nyheter > article > p,
+.fysik p {
 	margin: 24px;
 }
 .nyheter > article {
@@ -162,14 +165,14 @@ main {
 	background-color: rgb(255, 214, 109);
 }
 
-.nyheter, .fysik, .nobel { /*För att få samma storlek på alla rutor*/
+.nyheter,
+.fysik,
+.nobel {
+	/*För att få samma storlek på alla rutor*/
 	width: 70%;
 }
 
 /* Index.html */
-
-
-
 
 /*fysikaliska lagar*/
 
@@ -187,11 +190,14 @@ div.container {
 	grid-area: title;
 }
 
-.newtonsLagar, .termofysik, .krafter, .rörelse {
+.newtonsLagar,
+.termofysik,
+.krafter,
+.rörelse {
 	margin: auto;
 	align-content: center;
 	background: rgb(255, 222, 90);
-	background: linear-gradient(rgb(255, 227, 14), rgb(255, 219, 151));
+	background: linear-gradient(rgb(255, 217, 114), rgb(255, 219, 151));
 }
 
 main.fysikaliskaFormler {
@@ -213,7 +219,7 @@ main.fysikaliskaFormler > section:nth-of-type(n + 2) {
 main.fysikaliskaFormler > .intro {
 	background: rgb(244, 251, 255);
 	border: 2px dotted lightblue;
-	border: 0px;
+	border: 0;
 	width: 65%;
 	margin: auto;
 	padding: 10px;
@@ -400,20 +406,19 @@ main.fysikaliskaFormler > .intro {
 	grid-area: a4;
 }
 
-.a1, .a2, .a3, .a4 {
+.a1,
+.a2,
+.a3,
+.a4 {
 	margin: auto;
 }
 
 /*fysikaliska lagar*/
 
-
-
-
-
 /*omOss*/
 .omOss {
 	grid-area: main;
-	height: 0px; /*Minsta möjliga höjd för att tvinga griddet att minimeras.*/
+	height: 0; /*Minsta möjliga höjd för att tvinga griddet att minimeras.*/
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr;
@@ -423,11 +428,11 @@ main.fysikaliskaFormler > .intro {
 	padding: 16px;
 }
 .omOss > section {
-	background:rgb(240, 253, 255);
+	background: rgb(240, 253, 255);
 	width: 65%;
 	margin: 10px auto 40px auto;
 	line-break: auto;
-	border-radius: 5px;
+	border-radius: 9px;
 	border: 1px solid black;
 	font-size: 15px;
 }
@@ -439,18 +444,12 @@ main.fysikaliskaFormler > .intro {
 }
 /*omOss*/
 
-
-
-
-
-
-
 /*nobelPristagare*/
 
 .two_columns_nobel {
 	display: grid;
 	width: 100%;
-	grid-template-columns: 1fr 5fr 2fr 5fr 1fr;
+	grid-template-columns: 1fr 500px 2fr 500px 1fr;
 	grid-template-rows: 1fr 0.4fr 1fr 0.4fr 1fr 0.4fr 1fr;
 	grid-template-areas: ". twa . twb ." ". . . . ." ". twc . twd ." ". . throughouthistory . ." ". twe . twf ." ". . . . ." ". twg lista twh .";
 }
@@ -500,15 +499,15 @@ main.fysikaliskaFormler > .intro {
 	grid-template-areas: ". nobel_inner .";
 }
 .nobel_box_inner {
-	width: 100%;
+	width: 400px;
 	height: 100%;
-	object-fit: cover;
 	grid-area: nobel_inner;
 	border: 1px solid black;
 	margin: 20px;
 	padding: 10px;
 	border-radius: 40px;
 	background: rgb(241, 241, 241);
+	background: linear-gradient(to left, rgba(255, 175, 175, 0.4), rgba(168, 235, 255, 0.4));
 	display: grid;
 	grid-template-rows: 0.5fr 2fr 0.1fr;
 	grid-template-columns: 1fr 1fr;
@@ -560,16 +559,22 @@ main.fysikaliskaFormler > .intro {
 	grid-area: lista;
 	border: 1px solid black;
 	padding: 20px;
-	background: radial-gradient(rgb(236, 238, 255),rgb(255, 255, 255));
+	background: radial-gradient(rgb(236, 238, 255), rgb(255, 255, 255));
 }
 
 .nobelpristagare h2 {
-	color: rgb(0, 0, 0);
+	color: rgb(20, 20, 20);
+	text-shadow: #000 1px 00;
 	margin: 10px;
 	display: block;
-	text-decoration: 1px underline;
 	font-size: 30px;
 }
 
-/*nobelPristagare*/
+.Fysiker img {
+	margin-top: 70px;
+	width: 300px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 5px rgb(122, 122, 122);
+}
 
+/*nobelPristagare*/
