@@ -52,6 +52,7 @@ nav {
 	grid-template-areas: "titel menu";
 	width: 100%;
 	border: 1px solid black;
+	background: rgba(216, 239, 255, 0.1);
 }
 nav > h2 {
 	grid-area: titel;
