@@ -507,7 +507,7 @@ main.fysikaliskaFormler > .intro {
 	padding: 10px;
 	border-radius: 40px;
 	background: rgb(241, 241, 241);
-	background: linear-gradient(to left, rgba(255, 175, 175, 0.4), rgba(168, 235, 255, 0.4));
+	background: linear-gradient(to left, rgba(255, 175, 175, 0.25), rgba(168, 235, 255, 0.25));
 	display: grid;
 	grid-template-rows: 0.5fr 2fr 0.1fr;
 	grid-template-columns: 1fr 1fr;
