@@ -29,19 +29,20 @@
 			</ul>
 		</nav>
 
-		<main class="fysikaliskaFormler">
-			<section class="intro">
+		<main class="fysikaliskaFormler"> <!-- Alla större informationsbubblor har samma formulering av kod, därför kommenteras den första. -->
+			<section class="intro"> <!-- Mindre introduktion med länk till ett användbart formelblad -->
 				<h2>Intro</h2>
-				<p>Här kan du hitta information om fysikaliska lagar för bland annat klassisk mekanik, termisk fysik samt newtons lagar. Om du vill se alla formler som tillhör fysik 2 hittar du dem här: <a id="formelsamlingPdf"href="formelsamling_fysik_2.pdf" target=”_blank”> Formelsamling</a></p>
+				<p>Här kan du hitta information om fysikaliska lagar för bland annat klassisk mekanik, termisk fysik samt newtons lagar. Om du vill se alla formler som tillhör fysik 1 & 2 hittar du dem här: <a id="formelsamlingPdf" href="formelsamling_fysik_2.pdf"> Formelsamling</a></p>
 			</section>
-
-			<section class="rörelse">
-				<input type="checkbox" id="expandRörelse" >
-				<label class="labelMer" for="expandRörelse">&Gt; Visa &Lt;</label>
-				<label class="labelMindre" for="expandRörelse"> Visa mindre </label>
-				<h2>Rörelse</h2>
-				<div class="container">
-					<section class="a1">
+			
+			<section class="rörelse"> <!-- Större förälder för de olika lagarna -->
+				<input type="checkbox" id="expandRörelse" ><!-- Varje sektion har en checkbox (input) som kan expandera sektionen för de lämpliga lagarna  -->
+				<label class="labelMer" for="expandRörelse">&Gt; Visa &Lt;</label> <!-- Labeln är kopplad till inputen med for-attributet -->
+				<label class="labelMindre" for="expandRörelse"> Visa mindre </label> <!-- Alltid en label som inte visas. Label och info göms 
+					via CSS, så att även om en person inte har den senaste teknologin kommer hen fortfarande att kunna se all information.  -->
+				<h2>Rörelse</h2> <!-- Mer lokal titel -->
+				<div class="container"> <!-- Lokal förälder för de olika typerna av lagar -->
+					<section class="a1"> <!-- Bubbla för en lag -->
 						<h3>V = V<sub>0</sub> + at</h3>
 						<p>
 							Formeln beskriver hur en ny hastighet kan beräknas efter en acceleration

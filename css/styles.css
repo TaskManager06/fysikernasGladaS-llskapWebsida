@@ -2,7 +2,8 @@ body {
 	font-family: arial; /*Bestämmer att standard fonten ska vara Arial*/
 	display: grid; /*Skapar en grid mall för alla sidor*/
 	grid-template-columns: 100%; /*Bestämmer att sidan ska ha en kolumn som tar upp 100% av sidan*/
-	height: 100vh; /*Bestämmer att höjden på sidan ska vara 100% av viewheighten */
+	overflow-x: hidden;
+	height: 100vh;
 	margin: 0; /*Sätter marginen till 0 - inget mellanrum*/
 	grid-template-rows: 50px 75px 20px 1fr 65px;/* Bestämmer måtten för raderna på sidan*/
 	grid-template-areas: /*Skapar en grid.layout med semantiskt korrekta element*/
@@ -12,11 +13,6 @@ body {
 		"main"
 		"footer";
 	text-align: center; /*gör standard aletrnativet att all text ska vara centrerad */
-}
-body::-webkit-scrollbar {
-	/* for Chrome, Safari, and Opera */
-	width: 0px;
-	height: 0px;
 }
 
 /*Titeln för varje sida*/
@@ -29,26 +25,13 @@ header h1 {
 	text-decoration: underline;/*Skapar en linje under texten*/
 }
 
-/* ===== visa inte scrollbar för Chrome, Safari och Opera ===== */
-body *::-webkit-scrollbar {
-	display: none;
-}
-
-article {
-	-ms-overflow-style: none; /* för Internet Explorer, Edge */
-	scrollbar-width: none; /* för Firefox */
-	overflow-y: scroll;
-}
-
 body::-webkit-scrollbar {
-	/* for Chrome, Safari, and Opera */
-	width: 0;
-	height: 0;
-}
-/* ================================================================= */
+	display: none;
+  }
 
 header { /*Placerar alla headers i header raden*/
 	grid-area: header;
+	background: linear-gradient(rgb(229, 229, 229), rgb(255, 255, 255)); /*Skapar en gradient bakgrund*/
 }
 
 nav {
@@ -59,18 +42,19 @@ nav {
 	grid-template-areas: "titel menu";/*Bestämmer namn för grid placeringarna*/
 	width: 100%;/*Bestämmer att naven ska ta 100% av sitt föräldrar element*/
 	border: 2px solid black; /*Skapar en 2px tjock svart border*/
+	overflow: hidden;
 }
 nav > ul > li > a{ /*Bestämmer att länkarna i navven ska ej vara understrukna och vara färgade svarta*/
-	text-decoration: none;
+	text-decoration: none; 
 	color: black;
 }
-nav > h2 >a{ /*Bestämmer att h2an ej ska vara underskruken och vara svart. + färg och en border*/
+nav > h2 > a{ /*Bestämmer att h2an ej ska vara underskruken och vara ljusgrå. + färg och en border*/
 	text-decoration: none;
 	color: black;
-	padding: 10px;
-	border-radius: 10px 10px 10px 10px;
-	border: 1px solid black;
-	background: rgba(216, 239, 255, 0.1);
+	padding: 8px;
+	border-radius: 10px 10px 10px 10px; /*Rundar av hörnen*/
+	border: 1px solid rgb(202, 202, 202); /*Skapar en 1px tjock border*/
+	background: rgba(216, 239, 255, 0.1); 
 }
 nav > h2 {
 	grid-area: titel;/*Placerar h2an på rätt position*/
@@ -84,27 +68,27 @@ nav > ul {
 	margin: 9px; /*Skapar en 9px margin*/
 	text-align: right;/*Placerar texten mot höger*/
 }
-nav > ul > li {
-	background-color: rgb(243, 243, 243);
+nav > ul > li { 
+	background-color: rgb(240, 240, 240);
 	display: inline-block;
 	margin-top: -5px;
 	padding: 10px 20px 10px 20px;
 	border-radius: 3px;
-	transition-duration: 0.5s;
+	transition-duration: 0.4s; /*Skapar en transition effekt på 0.5 sekunder, snyggt under hovring*/
 }
 
-nav > ul > li:hover {
-	background-color: rgba(0, 0, 0, 0.1);
-	border-radius: 10px;
+nav > ul > li:hover { /*Skapar en hover effekt för knapparna i navven*/
+	background-color: rgba(0, 0, 0, 0.12); /*Skapar en grå bakgrundsfärg*/
+	border-radius: 10px; /*Rundar av hörnen då de hovras*/
 }
 
-footer {
+footer { /*Placerar alla footers i footer raden*/
 	grid-area: footer;
-	background-color: rgb(244, 244, 244);
+	background-color: rgb(244, 244, 244); /*Bestämmer bakgrundsfärgen, lite urskiljande från resten av sidan*/
 }
 
 a {
-	text-decoration: none;
+	text-decoration: none; /*Tar bort understrykning på länkar som default*/
 }
 
 main {
@@ -122,49 +106,47 @@ main {
 		"nyheter nobel"
 		"nyheter fysik";
 }
+
 .index h2 {
 	font-size: 1.25em; /* 1 + 1/4 storlek på texten. */
 }
-.intro {
+
+.index section {
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 5px;
+}
+
+.intro { /*Introduktionen*/
 	grid-area: intro;
 	border: 1px solid black;
 	border-radius: 7px;
-	margin: 45px auto 15px auto;
-	width: 72.2%;
-	overflow: scroll;
-	padding: 10px;
-	margin: 35px auto 15px auto;
-	height: auto;
-	max-height: 70%;
+	width: 72.3vw;
+	margin: 15px auto 15px auto;
 	background-color: rgb(206, 247, 255);
-	overflow: scroll;
 }
 
-.nyheter {
+.nyheter { /*Nyheter*/
 	grid-area: nyheter;
 	border: 1px solid black;
-	height: 650px;
 	margin: 35px 35px auto auto;
 	border-radius: 25px;
-	background-color: rgb(144, 237, 255);
+	background-color: rgba(144, 237, 255, 0.641);
 	margin-bottom: 20px;
 }
-.nyheter > article {
+.nyheter > article { /*Artiklarna*/
 	border: 1px solid black;
 	margin: 10px 20px 45px 20px;
-	height: 40%;
 	border-radius: 15px;
-	overflow: hidden;
 	background-color: rgb(206, 247, 255);
 }
-.nyheter > article > p,
-.fysik p {
+.nyheter > article > p, 
+.fysik p, .nobel p { /*Texten i artiklarna*/
 	margin: 24px;
+	font-size: 19px;
+	color:rgb(30, 30, 30);
+	min-width: none;
 }
-.nyheter > article {
-	overflow: scroll;
-}
-.nobel {
+
+.nobel { /*Nobelpristagare*/
 	grid-area: nobel;
 	border: 1px solid black;
 	height: 85%;
@@ -172,20 +154,13 @@ main {
 	border-radius: 25px;
 	background-color: rgb(255, 214, 109);
 }
-.nobel > a {
-	text-decoration: none;
-	color: black;
-	display: block;
-	height: 100%;
-}
-.fysik > a {
-	text-decoration: none;
+.nobel > a, .fysik > a {  /*Länkarna i nobel och fysik*/
 	color: black;
 	display: block;
 	height: 100%;
 }
 
-.fysik {
+.fysik { /*Fysikaliska lagarna på index*/
 	grid-area: fysik;
 	border: 1px solid black;
 	height: 85%;
@@ -195,7 +170,7 @@ main {
 	background-color: rgb(255, 214, 109);
 }
 
-.nyheter,
+.nyheter, 
 .fysik,
 .nobel {
 	/*För att få samma storlek på alla rutor*/
@@ -208,7 +183,7 @@ main {
 	transition-duration: 0.25s;
 }
 
-.nobel:hover,
+.nobel:hover, /*Vid hover: pop-effekt för att visa klickbarhet. Annars mkt mindre box-shadow*/
 .fysik:hover {
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -221,41 +196,47 @@ main {
 
 /*fysikaliska lagar*/
 
-.container > section {
+.container > section { 
 	background: rgb(255, 192, 74);
 	border-radius: 15px;
 	padding: 10px 15px 10px 15px;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px; /*Inte så mykcet effekt, Men gör massiva saker (ser inte platt ut) */
 }
 
-div.container {
+div.container { /*Sätter margin på 20px och grid-arean fr alla mindre saker inuti kategorierna för krafter. */
 	grid-area: content;
+	margin-bottom: 20px;
+}
+
+.fysikaliskaFormler > section { /*Endast section direkt under får lite box-shadow. Så att det står ut och inte blir platt.*/
+	box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 2px;
 }
 
 .fysikaliskaFormler section h2 {
 	grid-area: title;
 }
 
-.newtonsLagar,
+.newtonsLagar, /*Fixar margins, och bakgrundsfärger/gradients för de större kategorierna*/ 
 .termofysik,
 .krafter,
 .rörelse {
 	margin: auto;
-	align-content: center;
-	background: rgb(255, 222, 90);
-	background: linear-gradient(rgb(255, 217, 114), rgb(255, 219, 151));
+	align-content: center; 
+	background: linear-gradient(rgb(255, 217, 114), rgb(255, 219, 151)); /*Snygg gul-orange gradient*/
 }
 
 main.fysikaliskaFormler {
 	grid-area: main;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: auto auto auto auto;
-	grid-template-areas: "intro" "section1" "section2" "section3" "section4";
+	grid-template-rows: 10px auto 10px auto 10px auto 10px auto 10px auto 50px; /* "." och pixel-rowsen är för avstånd mellan sektionerna. */
+	grid-template-areas: "." "intro" "." "section1" "." "section2" "." "section3" "." "section4" ".";
 }
-main.fysikaliskaFormler input {
+main.fysikaliskaFormler input { /*Gömmer inputen (faktiska vita checkboxen, checkboxen agerar som "Visa"-textens knapp)
+	 för att den inte ska synas*/
 	display: none;
 }
-main.fysikaliskaFormler > section:nth-of-type(n + 2) {
+main.fysikaliskaFormler > section:nth-of-type(n + 2) { 
 	margin: 10px auto 10px auto;
 	padding: 20px 20px 20px 20px;
 	border-radius: 25px;
@@ -265,60 +246,96 @@ main.fysikaliskaFormler > section:nth-of-type(n + 2) {
 	grid-template-rows: 20% auto auto;
 	grid-template-areas: "title title" "content content" "expand expand";
 }
-main.fysikaliskaFormler > .intro {
-	background: rgb(244, 251, 255);
-	border: 2px dotted lightblue;
-	border: 0;
-	width: 65%;
+main.fysikaliskaFormler > .intro { /*Introduktionen*/
+	background: rgb(232, 247, 255); /*Ljusblå*/
+	border: 0;  /*Tar bort border*/
+	border: 1px solid rgb(171, 185, 193);
+	width: 48%; /*Gör den lite mindre (~20%) än de andra*/
 	margin: auto;
-	padding: 10px;
+	padding: 20px;
+	font-size: 15px; /*Gör texten lite större*/
 	border-radius: 15px;
 }
 label {
-	cursor: pointer;
+	cursor: pointer; /*Byter muspekare (Visa mer/mindre)*/
 }
 
+/*sätter alla sectioner på rätt plats*/
 .rörelse {
 	grid-area: section1;
 }
-
 .krafter {
 	grid-area: section2;
 }
 .termofysik {
 	grid-area: section3;
 }
-
-input:checked ~ .container {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
-	grid-template-areas: "a1 a2" "a3 a4";
-	gap: 15%;
-	padding: 10px 10px 10px 10px;
-}
-input:checked ~ .labelMindre {
-	display: block;
-	grid-area: expand;
-}
-input:checked ~ .labelMer {
-	display: none;
-}
 .newtonsLagar {
 	grid-area: section4;
 }
-section > .labelMer {
-	padding: 25px 0 25px 0;
-	width: 100%;
-	height: 100%;
+
+/*input:checked är när en container/section är "klickad"*/
+input:checked ~ .container {
+	display: grid;
+	grid-template-columns: 1fr 1fr; /*Skapar 2 kolumner*/
+	grid-template-rows: 1fr 1fr; /*Skapar 2 rader,  2x2 grid, 4 lagar som mest*/
+	grid-template-areas: "a1 a2" "a3 a4"; /*Placerar alla individuella lag-element på rätt plats*/
+	gap: 15%; 
+	padding: 10px 10px 10px 10px; /*Paddingen är för att få lite utrymme mellan alla lagar*/
+	border-radius: 20px;
+	animation-name: expand; /*triggar animationen "expand", körs 1 gång på 0.5 sekunder.*/
+	animation-duration: 0.5s; 
+
+}
+
+@keyframes expand { /*Skapar en animation som går från 0 till 1 i skala, och från -100px till 0px i margin-top,
+	ned-zoom effekt. */
+ from {
+	transform: scale(0); 
+	margin-top: -100px; /*"Göms" för högt upp, skjuts ned i animationen*/
+	color: transparent; /*Texten är osnylig i början, fadeas in*/
+	filter: blur(6px); /*Texten är suddig i början, fadeas in*/
+ }
+ to { /*
+			"to" behövs faktiskt inte i det här fallet då moderna webbläsare har som regel att gå ifrån "from"-stadiet till vanliga stadiet
+			med regler från sin parent eller liknande. Det är endast ifall den får andra egenskaper av någon annan regel/webbläsaren som något
+			kan gå fel. Följande ändrar ingenting men finns för säkerhetens skull & för framtida utvecklingar. 
+	*/
+	transform: scale(1);
+	margin-top: 0px; 
+	color: black; 
+	filter: blur(0px);
+ }
+}
+
+input:checked ~ .labelMindre { /*När en label blir klickad ska den andra labeln visas*/
+	display: block; /*här visas labeln*/
 	grid-area: expand;
 }
-section .labelMindre {
+input:checked ~ .labelMer { /*När en container är klickad ska den andra labeln försvinna*/
 	display: none;
 }
+
+section > .labelMer { /*.labelMer (visa mer) är visad default (då sidan laddas in och ännu inte blivit klickad*/
+	padding: 25px 0 25px 0;
+	width: 100%; /*Tar upp allt utrymme i sin parent*/
+	height: 100%; /*Tar upp allt utrymme i sin parent*/
+	grid-area: expand; 
+}
+section .labelMindre { /* .labelMindre (visa mindre) är gömd av default*/
+	display: none; /*Gömmer labeln*/
+}
+
+.labelMindre, .labelMer { /*Gör så att labeln är större och läsligare*/
+	font-size: 19px;
+	text-shadow: #888888 0px 0 1px; /*Med grått som text-shadow blir det lite högre kontrast ifall backgrunden är av icke-vit-svart sort.*/
+}
+
 section div.container {
-	display: none;
+	display: none; /*Gömmer alla containers, alltså individuella lagarna av default*/
 }
+
+/*Var olika formelbubblor är inuti kategorin. a1 -> a1 och så vidare. klass till area. */
 .a1 {
 	grid-area: a1;
 }
@@ -334,15 +351,13 @@ section div.container {
 .a4 {
 	grid-area: a4;
 }
-a[target] {
-	text-decoration: underline;
-}
 
+/*För formelsamlings-länken*/
 #formelsamlingPdf:link {
 	color: blue;
 }
 #formelsamlingPdf:visited {
-	color: forestgreen;
+	color: rgb(42, 10, 148);
 }
 
 /*fysikaliska lagar*/
@@ -350,45 +365,45 @@ a[target] {
 /*omOss*/
 .omOss {
 	grid-area: main;
-	height: 0; /*Minsta möjliga höjd för att tvinga griddet att minimeras.*/
+	height: 100%; /*Minsta möjliga höjd för att tvinga griddet att minimeras.*/
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 1fr;
 	grid-template-areas: "omOss" "kontakt";
 	background: linear-gradient(rgb(255, 255, 255), rgb(228, 228, 228));
 }
-.omOss p {
+.omOss p { /*Texten i omOss får liten padding för läslighetens skull*/
 	padding: 16px;
 }
-.omOss > section {
-	background: radial-gradient(rgb(255, 255, 255), rgb(244, 254, 255));
-	background:(206, 247, 255);
+.omOss > section { /*Sektionen för omOss, fin bakgrund & box-shadow med mera. width på 65% för att ge rumslig design. */
+	background: radial-gradient(rgb(255, 255, 255), rgb(233, 254, 255));
 	width: 65%;
 	margin: 10px auto 40px auto;
-	line-break: auto;
-	border-radius: 9px;
-	border: 1px solid black;
-	font-size: 15px;
-	box-shadow: 2px 2px rgb(202, 202, 202);
+	line-break: auto; /*Bryter ord som inte får plats på en rad*/
+	border-radius: 9px; /*Rundar av hörnen*/
+	border: 1px solid rgb(148, 148, 148);
+	font-size: 20px; 
+	box-shadow: 2px 2px rgb(202, 202, 202); /*Ljus skugga*/
 }
-.omOssSection {
-	grid-area: omOss;
-}
+.omOssSection { 
+	grid-area: omOss; /*Placerar omOss på rätt plats, grid-area 1/2*/
+} 
 .kontakt {
-	grid-area: kontakt;
+	grid-area: kontakt; /*Placerar kontakt på rätt plats, grid-area 2/2*/
 }
 /*omOss*/
 
 /*nobelPristagare*/
 
-.two_columns_nobel {
+.two_columns_nobel { /*Skapar en grid med 2 (större) kolumner för nobelpristagarna. */
 	display: grid;
 	width: 100%;
 	grid-template-columns: 1fr 500px 2fr 500px 1fr;
-	grid-template-rows: 1fr 0.4fr 1fr 0.4fr 1fr 0.4fr 1fr;
+	grid-template-rows: 1fr 0.4fr 1fr 0.4fr 1fr 0.4fr 1fr; /*För att få rätt storlek&margin på alla rutor används osynliga element*/
 	grid-template-areas: ". twa . twb ." ". . . . ." ". twc . twd ." ". . throughouthistory . ." ". twe . twf ." ". . . . ." ". twg lista twh .";
 }
 
+/*nobelX är en nobelpristagare, 8stk*/
 #nobel1 {
 	grid-area: twa;
 }
@@ -413,48 +428,53 @@ a[target] {
 #nobel8 {
 	grid-area: twh;
 }
-.nobelpristagare {
+
+
+.nobelpristagare { 
 	grid-area: main;
 }
 
+/*Textbiten "genom historien"*/
 .genom_historien {
-	padding-top: 100px;
-	grid-area: throughouthistory;
-	color: black;
+	padding-top: 100px; /*Skapar en padding så att texten inte är i toppen av sidan*/
+	grid-area: throughouthistory; /*Placerar texten på rätt plats*/
+	color: black; /*Texten ska vara svart, inte få sin färg från sin parent.*/
 }
 
+/*enkelt avstånd*/
 .nobel_spacer {
 	height: 100px;
 }
 
+/*Inre & yttre box*/
 .nobel_box {
-	display: grid;
-	grid-template-rows: 1;
+	display: grid; 
+	grid-template-rows: 1fr; 
 	grid-template-columns: 2fr 2fr 2fr;
-	grid-template-areas: ". nobel_inner .";
+	grid-template-areas: ". nobel_inner ."; /*Placerar nobel_inner på rätt plats med .-utrymmen på var sin sida*/
 }
-.nobel_box_inner {
-	width: 400px;
-	height: 100%;
-	grid-area: nobel_inner;
-	border: 1px solid black;
-	margin: 20px;
-	padding: 10px;
-	border-radius: 40px;
+.nobel_box_inner { /*Skapar en inre box & grid för varje box som är en nobelpristagare*/
+	width: 400px; /*Bestämmer bredden på boxen*/
+	height: 100%; /*Tar upp allt utrymme i sin parent*/
+	grid-area: nobel_inner; /*Placerar boxen på rätt plats*/
+	border: 1px solid black; /*Skapar en 1px tjock svart border*/
+	margin: 20px; /*Skapar en margin på 20px*/
+	padding: 10px; /*Skapar en padding på 10px*/
+	border-radius: 40px; /*Rundar av hörnen*/
 	background: rgb(241, 241, 241);
 	background: linear-gradient(to left, rgba(255, 175, 175, 0.15), rgba(168, 235, 255, 0.15));
-	display: grid;
-	grid-template-rows: 0.5fr 2fr 0.1fr;
+	display: grid; /*Skapar ett nytt grid*/
+	grid-template-rows: 0.5fr 2fr 0.1fr; 
 	grid-template-columns: 1fr 1fr;
-	grid-template-areas: "inner_a inner_b" "inner_c inner_d" "inner_e inner_f";
+	grid-template-areas: "inner_a inner_b" "inner_c inner_d" "inner_e inner_f";  /*positioner för alla element inuti får inner_ sen en bokstav*/
 }
 
-.nobel_box_inner img,
-.nobel_box_inner {
-	box-shadow: 3px 3px rgb(190, 190, 190);
+.nobel_box_inner img,  /*Bilden på nobelpristagaren*/
+.nobel_box_inner { /*& inre boxen*/
+	box-shadow: 3px 3px rgb(190, 190, 190); /*får en skugga*/
 }
 
-.forskare {
+.forskare { 
 	grid-area: inner_a;
 	margin-left: 5px;
 }
@@ -475,7 +495,7 @@ a[target] {
 	border: 1px solid black;
 	height: 38px;
 	width: 100%;
-	overflow: scroll;
+	overflow: hidden;
 	background: rgb(77, 75, 75);
 	border-radius: 5px;
 	font-weight: 600;
@@ -485,25 +505,26 @@ a[target] {
 	margin-top: -55px;
 	padding: 10px;
 }
-.nobel_img {
-	height: 200px;
-	grid-area: inner_d;
-	object-fit: cover;
-	border-radius: 12px;
-	filter: grayscale(30%) brightness(110%);
-	border: 1px solid whitesmoke;
+.nobel_img { /*Bilden på nobelpristagaren*/
+	height: 250px; /*Bestämmer höjden på bilden, alla blir lika stora*/
+	grid-area: inner_d; /*Placerar bilden på rätt plats inuti nobel_box_inner*/
+	object-fit: cover; /*Skalar bilden så att den passar i sin parent*/
+	border-radius: 12px; /*Rundar av hörnen*/
+	filter: grayscale(30%) brightness(110%); /*Skapar en gråskala på bilden, och ökar ljusstyrkan, så att bilderna ser mer lika ut. 
+	Ser även väldigt fint ut med fysiker */
+	border: 1px solid whitesmoke; /*Skapar en 1px tjock vit border, knappt synlig*/
 }
 
-.NobelPrisTagareExtra {
-	margin-top: 100px;
-	list-style: none;
-	grid-area: lista;
-	border: 1px solid black;
-	padding: 20px;
-	background: radial-gradient(rgb(236, 238, 255), rgb(255, 255, 255));
+.NobelPrisTagareExtra { /*Skapar en grid för listan över länkarna för nobelpristagarna.*/
+	margin-top: 100px; /*Skapar en margin på 100px, fixar avståndet*/
+	list-style: none; /*Tar bort punkterna*/
+	grid-area: lista; /*Placerar "listan" på rätt plats*/
+	border: 1px solid black; /*Skapar en 1px tjock svart border*/
+	padding: 20px; /*Skapar en padding på 20px runtom inuti elementet, så att texten blir fint spacead. */
+	background: radial-gradient(rgb(236, 238, 255), rgb(255, 255, 255)); /*Skapar en fin gradient, bakgrund.*/
 }
 
-.nobelpristagare h2 {
+.nobelpristagare h2 { /*Skapar en h2-text. För de mindre titlarna*/
 	color: rgb(20, 20, 20);
 	text-shadow: #000 1px 00;
 	margin: 10px;
@@ -511,16 +532,34 @@ a[target] {
 	font-size: 30px;
 }
 
-.Fysiker img {
-	margin-top: 70px;
-	width: 40vh;
-	border-radius: 10px;
-	box-shadow: 5px 5px 5px rgb(122, 122, 122);
+
+/*Fysiker-klasserna är för de mindre sidorna (från den lokala menyn) */
+
+.Fysiker { /*Skapar en grid för fysikerns information & bild*/
+	width: 100%; /*Tar upp allt utrymme i längd*/
+	height: 100%; /*Tar upp allt utrymme i höjd*/
+	display: grid; /*Skapar ett grid*/
+	grid-template-columns: 4fr 60vw 4fr; /*Skapar 3 kolumner, 20% av sidan, 60% av sidan, 20% av sidan*/
+	grid-template-rows: 1fr 1fr; /*Skapar 2 rader, 1fr = 1fraktion av sidan*/
+	grid-template-areas: ". Fysikerbild ." ". om . " ". Fysikertext ."; /*Placerar bild och text på rätt plats med sina respektive utrymmen*/
 }
 
-.Fysiker p {
-	font-size: 3ex;
-	width: 60vw;
-	margin-left: 20vw;
+.Fysiker img { /*Bilderna på fysikern*/
+	grid-area: Fysikerbild; /*Placerar bilden på rätt plats*/
+	margin-top: 70px; /*Skapar en margin på 70px så att bilden inte är längst upp på sidan, lite utrymme*/
+	width: 40vh; /*Bestämmer bredden på bilden, sätter den på 40 view-width, alla bilder blir samma storlek*/
+	border-radius: 10px; /*Rundar av hörnen lite*/
+	margin-left: 20vw; /*Skapar en margin på 20 view-width, så att bilden inte är längst till vänster*/
+	box-shadow: 5px 5px 5px rgb(122, 122, 122); /*Skapar en skugga, ser mkt fint ut, som att den flyger över sidan.*/
+}
+
+.Fysiker h2 {
+	grid-area: om; /*Lilla titeln*/
+}
+
+.Fysiker p { /*Texten för fysikern*/
+	grid-area: Fysikertext; /*Placerar texten på rätt plats*/
+	font-size: 3ex; 
+	width: 60vw; /*Bestämmer bredden på texten, sätter den på 60 view-width (60% av bredden som man ser sidan med) */
 }
 /*nobelPristagare*/
